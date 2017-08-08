@@ -3,7 +3,7 @@
 /**
  * Service used for managing possible values of advertisement custom
  * fields
- * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html 
+ * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class AdCustomFieldPossibleValueService extends Service {
@@ -16,7 +16,7 @@ class AdCustomFieldPossibleValueService extends Service {
      * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#getData(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#getData(java.lang.Long)
      */
     public function getData($id) {
         return $this->run('getData', array($id));
@@ -26,19 +26,20 @@ class AdCustomFieldPossibleValueService extends Service {
      * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#getDataForNew(DP)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#getDataForNew(DP)
      */
     public function getDataForNew($params) {
         return $this->run('getDataForNew', array($params));
     }
     
     /**
-     * Inserts a list of custom field possible values
-     * @param customFieldId Java type: java.lang.Long     * @param parentValueId Java type: java.lang.Long     * @param possibleValues Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#insert(java.lang.Long,%20java.lang.Long,%20java.util.List)
+     * Inserts a list of custom field possible values, optionally in a
+     * category
+     * @param customFieldId Java type: java.lang.Long     * @param categoryId Java type: java.lang.Long     * @param possibleValues Java type: java.util.List
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#insert(java.lang.Long,%20java.lang.Long,%20java.util.List)
      */
-    public function insert($customFieldId, $parentValueId, $possibleValues) {
-        $this->run('insert', array($customFieldId, $parentValueId, $possibleValues));
+    public function insert($customFieldId, $categoryId, $possibleValues) {
+        $this->run('insert', array($customFieldId, $categoryId, $possibleValues));
     }
     
     /**
@@ -46,7 +47,7 @@ class AdCustomFieldPossibleValueService extends Service {
      * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#load(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#load(java.lang.Long)
      */
     public function load($id) {
         return $this->run('load', array($id));
@@ -55,7 +56,7 @@ class AdCustomFieldPossibleValueService extends Service {
     /**
      * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#remove(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#remove(java.lang.Long)
      */
     public function remove($id) {
         $this->run('remove', array($id));
@@ -64,7 +65,7 @@ class AdCustomFieldPossibleValueService extends Service {
     /**
      * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#removeAll(java.util.Collection)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#removeAll(java.util.Collection)
      */
     public function removeAll($ids) {
         $this->run('removeAll', array($ids));
@@ -74,7 +75,7 @@ class AdCustomFieldPossibleValueService extends Service {
      * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#save(DTO)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#save(DTO)
      */
     public function save($object) {
         return $this->run('save', array($object));
@@ -84,7 +85,7 @@ class AdCustomFieldPossibleValueService extends Service {
      * Searches for possible values
      * @param query Java type: org.cyclos.model.system.fields.CustomFieldPossibleValueQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#search(org.cyclos.model.system.fields.CustomFieldPossibleValueQuery)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCustomFieldPossibleValueService.html#search(org.cyclos.model.system.fields.CustomFieldPossibleValueQuery)
      */
     public function search($query) {
         return $this->run('search', array($query));

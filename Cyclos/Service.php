@@ -19,8 +19,12 @@ class Service {
 		
 		// Execute the request
 		$json = \curl_exec($ch);
-		$result = \json_decode($json);
 		$code = \curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		if ($code == 0) {
+			// The server couldn't be contacted
+			throw new ConnectionException();
+		}
+		$result = \json_decode($json);
 		if ($code == 200) {
 			return $result->result;
 		} else {

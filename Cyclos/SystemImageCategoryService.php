@@ -2,7 +2,7 @@
 
 /**
  * Service interface for custom image category
- * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemImageCategoryService.html 
+ * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemImageCategoryService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class SystemImageCategoryService extends Service {
@@ -15,7 +15,7 @@ class SystemImageCategoryService extends Service {
      * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#getData(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#getData(java.lang.Long)
      */
     public function getData($id) {
         return $this->run('getData', array($id));
@@ -25,7 +25,7 @@ class SystemImageCategoryService extends Service {
      * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#getDataForNew(DP)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#getDataForNew(DP)
      */
     public function getDataForNew($params) {
         return $this->run('getDataForNew', array($params));
@@ -35,7 +35,7 @@ class SystemImageCategoryService extends Service {
      * Returns all custom image categories
 
      * @return Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#list()
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#list()
      */
     public function _list() {
         return $this->run('list', array());
@@ -46,7 +46,7 @@ class SystemImageCategoryService extends Service {
      * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#load(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#load(java.lang.Long)
      */
     public function load($id) {
         return $this->run('load', array($id));
@@ -55,7 +55,7 @@ class SystemImageCategoryService extends Service {
     /**
      * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#remove(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#remove(java.lang.Long)
      */
     public function remove($id) {
         $this->run('remove', array($id));
@@ -64,7 +64,7 @@ class SystemImageCategoryService extends Service {
     /**
      * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#removeAll(java.util.Collection)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#removeAll(java.util.Collection)
      */
     public function removeAll($ids) {
         $this->run('removeAll', array($ids));
@@ -74,7 +74,7 @@ class SystemImageCategoryService extends Service {
      * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#save(DTO)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#save(DTO)
      */
     public function save($object) {
         return $this->run('save', array($object));
@@ -83,7 +83,7 @@ class SystemImageCategoryService extends Service {
     /**
      * Saves the order for categories
      * @param ids Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#saveOrder(java.util.List)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemImageCategoryService.html#saveOrder(java.util.List)
      */
     public function saveOrder($ids) {
         $this->run('saveOrder', array($ids));

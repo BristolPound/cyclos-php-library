@@ -2,7 +2,7 @@
 
 /**
  * Used to retrieve data used by Cyclos client application
- * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/InitializationService.html 
+ * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/InitializationService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class InitializationService extends Service {
@@ -15,7 +15,7 @@ class InitializationService extends Service {
      * Returns basic data to bootstrap the client application
 
      * @return Java type: org.cyclos.model.access.BasicInitializationData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/InitializationService.html#getBasicInitializationData()
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/InitializationService.html#getBasicInitializationData()
      */
     public function getBasicInitializationData() {
         return $this->run('getBasicInitializationData', array());
@@ -26,7 +26,7 @@ class InitializationService extends Service {
      * some additional content
 
      * @return Java type: org.cyclos.model.access.BasicInitializationWithContentData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/InitializationService.html#getBasicInitializationWithContentData()
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/InitializationService.html#getBasicInitializationWithContentData()
      */
     public function getBasicInitializationWithContentData() {
         return $this->run('getBasicInitializationWithContentData', array());
@@ -36,7 +36,7 @@ class InitializationService extends Service {
      * Returns data for the home page
 
      * @return Java type: org.cyclos.model.users.users.HomeData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/InitializationService.html#getHomeData()
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/InitializationService.html#getHomeData()
      */
     public function getHomeData() {
         return $this->run('getHomeData', array());
@@ -46,7 +46,7 @@ class InitializationService extends Service {
      * Returns all data which is used when the application is loaded
 
      * @return Java type: org.cyclos.model.access.InitializationData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/InitializationService.html#getInitializationData()
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/InitializationService.html#getInitializationData()
      */
     public function getInitializationData() {
         return $this->run('getInitializationData', array());
@@ -58,7 +58,7 @@ class InitializationService extends Service {
      * parameter contains the versions stored in the mobile application.
      * @param guestVersionData Java type: org.cyclos.model.access.MobileGuestVersionData
      * @return Java type: org.cyclos.model.access.MobileGuestInitializationData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/InitializationService.html#getMobileGuestInitializationData(org.cyclos.model.access.MobileGuestVersionData)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/InitializationService.html#getMobileGuestInitializationData(org.cyclos.model.access.MobileGuestVersionData)
      */
     public function getMobileGuestInitializationData($guestVersionData) {
         return $this->run('getMobileGuestInitializationData', array($guestVersionData));
@@ -70,7 +70,7 @@ class InitializationService extends Service {
      * mobile application.
      * @param userVersionData Java type: org.cyclos.model.access.MobileUserVersionData
      * @return Java type: org.cyclos.model.access.MobileUserInitializationData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/InitializationService.html#getMobileUserInitializationData(org.cyclos.model.access.MobileUserVersionData)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/InitializationService.html#getMobileUserInitializationData(org.cyclos.model.access.MobileUserVersionData)
      */
     public function getMobileUserInitializationData($userVersionData) {
         return $this->run('getMobileUserInitializationData', array($userVersionData));
@@ -79,7 +79,7 @@ class InitializationService extends Service {
     /**
      * May be invoked just to make sure the server is up
 
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/InitializationService.html#ping()
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/InitializationService.html#ping()
      */
     public function ping() {
         $this->run('ping', array());

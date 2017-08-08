@@ -3,7 +3,7 @@
 /**
  * Service interface for system custom images. The parameter for saving
  * new images is the system image category id.
- * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html 
+ * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class SystemCustomImageService extends Service {
@@ -17,7 +17,7 @@ class SystemCustomImageService extends Service {
      * user
 
      * @return Java type: org.cyclos.model.contentmanagement.images.AccessibleSystemImageCategoriesData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#getAccessibleImageCategories()
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#getAccessibleImageCategories()
      */
     public function getAccessibleImageCategories() {
         return $this->run('getAccessibleImageCategories', array());
@@ -27,7 +27,7 @@ class SystemCustomImageService extends Service {
      * Returns data for searching system custom images
 
      * @return Java type: org.cyclos.model.contentmanagement.images.SystemCustomImagesSearchData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#getSearchData()
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#getSearchData()
      */
     public function getSearchData() {
         return $this->run('getSearchData', array());
@@ -38,7 +38,7 @@ class SystemCustomImageService extends Service {
      * images) or user id (when user custom images)
      * @param categoryId Java type: java.lang.Long
      * @return Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#list(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#list(java.lang.Long)
      */
     public function _list($categoryId) {
         return $this->run('list', array($categoryId));
@@ -48,7 +48,7 @@ class SystemCustomImageService extends Service {
      * Loads a VO by id
      * @param id Java type: java.lang.Long
      * @return Java type: VO
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#load(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#load(java.lang.Long)
      */
     public function load($id) {
         return $this->run('load', array($id));
@@ -58,7 +58,7 @@ class SystemCustomImageService extends Service {
      * Loads a VO by url id
      * @param key Java type: java.lang.String
      * @return Java type: VO
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#loadByKey(java.lang.String)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#loadByKey(java.lang.String)
      */
     public function loadByKey($key) {
         return $this->run('loadByKey', array($key));
@@ -69,7 +69,7 @@ class SystemCustomImageService extends Service {
      * size
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#readContent(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#readContent(java.lang.Long)
      */
     public function readContent($id) {
         return $this->run('readContent', array($id));
@@ -80,7 +80,7 @@ class SystemCustomImageService extends Service {
      * specified size
      * @param key Java type: java.lang.String
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#readContentByKey(java.lang.String)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#readContentByKey(java.lang.String)
      */
     public function readContentByKey($key) {
         return $this->run('readContentByKey', array($key));
@@ -89,7 +89,7 @@ class SystemCustomImageService extends Service {
     /**
      * Removes the given image
      * @param id Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#remove(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#remove(java.lang.Long)
      */
     public function remove($id) {
         $this->run('remove', array($id));
@@ -100,7 +100,7 @@ class SystemCustomImageService extends Service {
      * image type), returning the descriptor
      * @param param Java type: NP     * @param name Java type: java.lang.String     * @param contents Java type: org.cyclos.server.utils.SerializableInputStream     * @param contentType Java type: java.lang.String
      * @return Java type: VO
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#save(NP,%20java.lang.String,%20org.cyclos.server.utils.SerializableInputStream,%20java.lang.String)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#save(NP,%20java.lang.String,%20org.cyclos.server.utils.SerializableInputStream,%20java.lang.String)
      */
     public function save($param, $name, $contents, $contentType) {
         return $this->run('save', array($param, $name, $contents, $contentType));
@@ -109,7 +109,7 @@ class SystemCustomImageService extends Service {
     /**
      * Saves the category of the given image
      * @param id Java type: java.lang.Long     * @param categoryId Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#saveCategory(java.lang.Long,%20java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#saveCategory(java.lang.Long,%20java.lang.Long)
      */
     public function saveCategory($id, $categoryId) {
         $this->run('saveCategory', array($id, $categoryId));
@@ -119,7 +119,7 @@ class SystemCustomImageService extends Service {
      * Saves details on the given image
      * @param image Java type: org.cyclos.model.contentmanagement.images.SystemCustomImageDTO
      * @return Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#saveDetails(org.cyclos.model.contentmanagement.images.SystemCustomImageDTO)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#saveDetails(org.cyclos.model.contentmanagement.images.SystemCustomImageDTO)
      */
     public function saveDetails($image) {
         return $this->run('saveDetails', array($image));
@@ -128,7 +128,7 @@ class SystemCustomImageService extends Service {
     /**
      * Saves the name of the given image
      * @param id Java type: java.lang.Long     * @param name Java type: java.lang.String
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/SystemCustomImageService.html#saveName(java.lang.Long,%20java.lang.String)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/SystemCustomImageService.html#saveName(java.lang.Long,%20java.lang.String)
      */
     public function saveName($id, $name) {
         $this->run('saveName', array($id, $name));

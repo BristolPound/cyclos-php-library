@@ -2,7 +2,7 @@
 
 /**
  * Service interface for account fee log
- * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountFeeLogService.html 
+ * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class AccountFeeLogService extends Service {
@@ -15,7 +15,7 @@ class AccountFeeLogService extends Service {
      * Returns data about an account fee execution
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.accountfees.AccountFeeLogData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountFeeLogService.html#getData(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#getData(java.lang.Long)
      */
     public function getData($id) {
         return $this->run('getData', array($id));
@@ -25,7 +25,7 @@ class AccountFeeLogService extends Service {
      * Returns data to search account fee logs of the given account fee
      * @param accountFeeId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.accountfees.AccountFeeLogsSearchData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountFeeLogService.html#getSearchData(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#getSearchData(java.lang.Long)
      */
     public function getSearchData($accountFeeId) {
         return $this->run('getSearchData', array($accountFeeId));
@@ -36,7 +36,7 @@ class AccountFeeLogService extends Service {
      * the previous and next execution data
 
      * @return Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountFeeLogService.html#listFeeExecutions()
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#listFeeExecutions()
      */
     public function listFeeExecutions() {
         return $this->run('listFeeExecutions', array());
@@ -45,7 +45,7 @@ class AccountFeeLogService extends Service {
     /**
      * Starts recharging a fee which has finished and some failed users
      * @param id Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountFeeLogService.html#rechargeFailed(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#rechargeFailed(java.lang.Long)
      */
     public function rechargeFailed($id) {
         $this->run('rechargeFailed', array($id));
@@ -56,7 +56,7 @@ class AccountFeeLogService extends Service {
      * id
      * @param accountFeeId Java type: java.lang.Long
      * @return Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountFeeLogService.html#runNow(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#runNow(java.lang.Long)
      */
     public function runNow($accountFeeId) {
         return $this->run('runNow', array($accountFeeId));
@@ -66,7 +66,7 @@ class AccountFeeLogService extends Service {
      * Searches for account fee logs according to the given criteria
      * @param query Java type: org.cyclos.model.banking.accountfees.AccountFeeLogQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountFeeLogService.html#search(org.cyclos.model.banking.accountfees.AccountFeeLogQuery)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#search(org.cyclos.model.banking.accountfees.AccountFeeLogQuery)
      */
     public function search($query) {
         return $this->run('search', array($query));

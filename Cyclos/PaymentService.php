@@ -6,7 +6,7 @@
  * performing a payment normally starts by using
  * TransactionService#getPaymentData. Then, at a certain point, the user
  * can #preview and eventually #perform the payment.
- * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/PaymentService.html 
+ * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class PaymentService extends Service {
@@ -19,7 +19,7 @@ class PaymentService extends Service {
      * Returns data about a payment
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.transactions.PaymentData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/PaymentService.html#getData(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#getData(java.lang.Long)
      */
     public function getData($id) {
         return $this->run('getData', array($id));
@@ -27,10 +27,10 @@ class PaymentService extends Service {
     
     /**
      * Performs a payment, according to the given parameters, returning the
-     * resulting id
+     * resulting payment.
      * @param parameters Java type: org.cyclos.model.banking.transactions.PerformPaymentDTO
      * @return Java type: org.cyclos.model.banking.transactions.PaymentVO
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/PaymentService.html#perform(org.cyclos.model.banking.transactions.PerformPaymentDTO)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#perform(org.cyclos.model.banking.transactions.PerformPaymentDTO)
      */
     public function perform($parameters) {
         return $this->run('perform', array($parameters));
@@ -40,30 +40,30 @@ class PaymentService extends Service {
      * Previews a payment
      * @param parameters Java type: org.cyclos.model.banking.transactions.PerformPaymentDTO
      * @return Java type: org.cyclos.model.banking.transactions.PaymentPreviewVO
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/PaymentService.html#preview(org.cyclos.model.banking.transactions.PerformPaymentDTO)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#preview(org.cyclos.model.banking.transactions.PerformPaymentDTO)
      */
     public function preview($parameters) {
         return $this->run('preview', array($parameters));
     }
     
     /**
-     * Generates a PDF file for a payment details
+     * Generates a PDF file with the details for a payment.
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/PaymentService.html#printPayment(java.lang.Long)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#print(java.lang.Long)
      */
-    public function printPayment($id) {
-        return $this->run('printPayment', array($id));
+    public function _print($id) {
+        return $this->run('print', array($id));
     }
     
     /**
      * Searches for payments, according to the given query
      * @param query Java type: org.cyclos.model.banking.transactions.PaymentQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/PaymentService.html#searchEntries(org.cyclos.model.banking.transactions.PaymentQuery)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#search(org.cyclos.model.banking.transactions.PaymentQuery)
      */
-    public function searchEntries($query) {
-        return $this->run('searchEntries', array($query));
+    public function search($query) {
+        return $this->run('search', array($query));
     }
     
 }

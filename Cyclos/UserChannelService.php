@@ -2,7 +2,7 @@
 
 /**
  * Contains methods to access / view the access of users on channels
- * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/UserChannelService.html 
+ * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/UserChannelService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class UserChannelService extends Service {
@@ -16,7 +16,7 @@ class UserChannelService extends Service {
      * user
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.access.userchannels.UserChannelsData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/UserChannelService.html#getChannelsData(org.cyclos.model.users.users.UserLocatorVO)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/UserChannelService.html#getChannelsData(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function getChannelsData($locator) {
         return $this->run('getChannelsData', array($locator));
@@ -28,7 +28,7 @@ class UserChannelService extends Service {
      * disabled on configurations. In those cases, those channels will be
      * enabled / disable despite the ones set via this method.
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param channelIds Java type: java.util.Set
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/access/UserChannelService.html#saveChannels(org.cyclos.model.users.users.UserLocatorVO,%20java.util.Set)
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/UserChannelService.html#saveChannels(org.cyclos.model.users.users.UserLocatorVO,%20java.util.Set)
      */
     public function saveChannels($locator, $channelIds) {
         $this->run('saveChannels', array($locator, $channelIds));
