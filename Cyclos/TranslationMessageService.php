@@ -29,21 +29,21 @@ class TranslationMessageService extends Service {
     }
     
     /**
-
-     * @return Java type: java.util.List
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/TranslationMessageService.html#getProductLanguages()
-     */
-    public function getProductLanguages() {
-        return $this->run('getProductLanguages', array());
-    }
-    
-    /**
      * @param languageId Java type: java.lang.Long     * @param key Java type: java.lang.String
      * @return Java type: org.cyclos.model.contentmanagement.translations.TranslationKeyData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/TranslationMessageService.html#getTranslationKeyData(java.lang.Long,%20java.lang.String)
      */
     public function getTranslationKeyData($languageId, $key) {
         return $this->run('getTranslationKeyData', array($languageId, $key));
+    }
+    
+    /**
+
+     * @return Java type: java.util.List
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/TranslationMessageService.html#listTranslatableLanguages()
+     */
+    public function listTranslatableLanguages() {
+        return $this->run('listTranslatableLanguages', array());
     }
     
     /**

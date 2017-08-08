@@ -12,7 +12,7 @@ class LanguageService extends Service {
     
     /**
      * @param id Java type: java.lang.Long
-     * @return Java type: org.cyclos.model.system.languages.LanguageVO
+     * @return Java type: org.cyclos.model.system.languages.LanguageDetailedVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/LanguageService.html#get(java.lang.Long)
      */
     public function get($id) {
@@ -21,7 +21,7 @@ class LanguageService extends Service {
     
     /**
 
-     * @return Java type: org.cyclos.model.system.languages.LanguageVO
+     * @return Java type: org.cyclos.model.system.languages.LanguageDetailedVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/LanguageService.html#getCurrent()
      */
     public function getCurrent() {
