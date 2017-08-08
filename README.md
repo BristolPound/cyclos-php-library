@@ -1,7 +1,11 @@
-= Cyclos Web Service PHP client library
+# Cyclos Web Service PHP client library
 
-== Original Documentation
+## Original Documentation
 
 https://documentation.cyclos.org
 
+## Installation
 
+```
+composer require bristolpound/cyclos-php-library
+```
