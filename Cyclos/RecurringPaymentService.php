@@ -1,9 +1,9 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html
+ * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html
  * 
- * Generated with Cyclos 4.7.3
+ * Generated with Cyclos 4.8.1
  * 
  * WARNING: The API is subject to change between revision versions
  * (for example, 4.5 to 4.6).
@@ -16,7 +16,7 @@ class RecurringPaymentService extends Service {
     
     /**
      * @param params Java type: org.cyclos.model.banking.transactions.RecurringPaymentActionDTO
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#cancel(org.cyclos.model.banking.transactions.RecurringPaymentActionDTO)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#cancel(org.cyclos.model.banking.transactions.RecurringPaymentActionDTO)
      */
     public function cancel($params) {
         $this->__run('cancel', array($params));
@@ -25,7 +25,7 @@ class RecurringPaymentService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.transactions.RecurringPaymentData
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#getData(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#getData(java.lang.Long)
      */
     public function getData($id) {
         return $this->__run('getData', array($id));
@@ -34,7 +34,7 @@ class RecurringPaymentService extends Service {
     /**
      * @param recurringPayment Java type: org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO
      * @return Java type: org.cyclos.model.banking.transactions.RecurringPaymentVO
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#perform(org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#perform(org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO)
      */
     public function perform($recurringPayment) {
         return $this->__run('perform', array($recurringPayment));
@@ -43,7 +43,7 @@ class RecurringPaymentService extends Service {
     /**
      * @param parameters Java type: org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO
      * @return Java type: org.cyclos.model.banking.transactions.RecurringPaymentPreviewVO
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#preview(org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#preview(org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO)
      */
     public function preview($parameters) {
         return $this->__run('preview', array($parameters));
@@ -52,7 +52,7 @@ class RecurringPaymentService extends Service {
     /**
      * @param parameters Java type: org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO
      * @return Java type: org.cyclos.model.banking.transactions.RecurringPaymentPreviewVO
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#previewReceive(org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#previewReceive(org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO)
      */
     public function previewReceive($parameters) {
         return $this->__run('previewReceive', array($parameters));
@@ -61,7 +61,7 @@ class RecurringPaymentService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#print(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#print(java.lang.Long)
      */
     public function _print($id) {
         return $this->__run('print', array($id));
@@ -70,7 +70,7 @@ class RecurringPaymentService extends Service {
     /**
      * @param query Java type: org.cyclos.model.banking.transactions.RecurringPaymentQuery
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#printRecurringPayments(org.cyclos.model.banking.transactions.RecurringPaymentQuery)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#printRecurringPayments(org.cyclos.model.banking.transactions.RecurringPaymentQuery)
      */
     public function printRecurringPayments($query) {
         return $this->__run('printRecurringPayments', array($query));
@@ -79,7 +79,7 @@ class RecurringPaymentService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.transactions.FailedOccurrenceActionDTO
      * @return Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#processFailure(org.cyclos.model.banking.transactions.FailedOccurrenceActionDTO)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#processFailure(org.cyclos.model.banking.transactions.FailedOccurrenceActionDTO)
      */
     public function processFailure($params) {
         return $this->__run('processFailure', array($params));
@@ -88,7 +88,7 @@ class RecurringPaymentService extends Service {
     /**
      * @param recurringPayment Java type: org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO
      * @return Java type: org.cyclos.model.banking.transactions.RecurringPaymentVO
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#receive(org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#receive(org.cyclos.model.banking.transactions.PerformRecurringPaymentDTO)
      */
     public function receive($recurringPayment) {
         return $this->__run('receive', array($recurringPayment));
@@ -97,7 +97,7 @@ class RecurringPaymentService extends Service {
     /**
      * @param query Java type: org.cyclos.model.banking.transactions.RecurringPaymentQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#search(org.cyclos.model.banking.transactions.RecurringPaymentQuery)
+     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/banking/RecurringPaymentService.html#search(org.cyclos.model.banking.transactions.RecurringPaymentQuery)
      */
     public function search($query) {
         return $this->__run('search', array($query));
