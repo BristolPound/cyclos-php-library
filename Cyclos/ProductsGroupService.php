@@ -1,7 +1,7 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html 
+ * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class ProductsGroupService extends Service {
@@ -11,30 +11,29 @@ class ProductsGroupService extends Service {
     }
     
     /**
-     * @param productId Java type: java.lang.Long     * @param ownerId Java type: java.lang.Long
-     * @return Java type: org.cyclos.model.users.products.ActiveProductsData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html#assign(java.lang.Long,%20java.lang.Long)
+     * @param product Java type: org.cyclos.model.users.products.ProductVO     * @param ownerId Java type: java.lang.Long
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html#assign(org.cyclos.model.users.products.ProductVO,%20java.lang.Long)
      */
-    public function assign($productId, $ownerId) {
-        return $this->run('assign', array($productId, $ownerId));
+    public function assign($product, $ownerId) {
+        $this->run('assign', array($product, $ownerId));
     }
     
     /**
-     * @param ownerId Java type: java.lang.Long
+     * @param ownerId Java type: java.lang.Long     * @param channel Java type: org.cyclos.model.access.channels.ChannelVO
      * @return Java type: org.cyclos.model.users.products.ActiveProductsData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html#getActiveProducts(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html#getActiveProducts(java.lang.Long,%20org.cyclos.model.access.channels.ChannelVO)
      */
-    public function getActiveProducts($ownerId) {
-        return $this->run('getActiveProducts', array($ownerId));
+    public function getActiveProducts($ownerId, $channel) {
+        return $this->run('getActiveProducts', array($ownerId, $channel));
     }
     
     /**
-     * @param productId Java type: java.lang.Long     * @param ownerId Java type: java.lang.Long
-     * @return Java type: org.cyclos.model.users.products.ActiveProductsData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html#unassign(java.lang.Long,%20java.lang.Long)
+     * @param product Java type: org.cyclos.model.users.products.ProductVO     * @param ownerId Java type: java.lang.Long
+     * @return Java type: boolean
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html#unassign(org.cyclos.model.users.products.ProductVO,%20java.lang.Long)
      */
-    public function unassign($productId, $ownerId) {
-        return $this->run('unassign', array($productId, $ownerId));
+    public function unassign($product, $ownerId) {
+        return $this->run('unassign', array($product, $ownerId));
     }
     
 }

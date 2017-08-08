@@ -1,7 +1,7 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html 
+ * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class UserDashboardActionsService extends Service {
@@ -13,7 +13,7 @@ class UserDashboardActionsService extends Service {
     /**
 
      * @return Java type: org.cyclos.model.users.dashboardsettings.UserDashboardActionsData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html#getData()
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html#getData()
      */
     public function getData() {
         return $this->run('getData', array());
@@ -21,7 +21,7 @@ class UserDashboardActionsService extends Service {
     
     /**
 
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html#restoreDefaultDashboardActions()
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html#restoreDefaultDashboardActions()
      */
     public function restoreDefaultDashboardActions() {
         $this->run('restoreDefaultDashboardActions', array());
@@ -29,7 +29,7 @@ class UserDashboardActionsService extends Service {
     
     /**
      * @param dashboardAction Java type: java.util.List
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html#save(java.util.List)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html#save(java.util.List)
      */
     public function save($dashboardAction) {
         $this->run('save', array($dashboardAction));
@@ -37,7 +37,7 @@ class UserDashboardActionsService extends Service {
     
     /**
      * @param dashboardActions Java type: java.util.List
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html#saveOrder(java.util.List)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/UserDashboardActionsService.html#saveOrder(java.util.List)
      */
     public function saveOrder($dashboardActions) {
         $this->run('saveOrder', array($dashboardActions));

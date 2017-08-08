@@ -1,7 +1,7 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserStatusService.html 
+ * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/UserStatusService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class UserStatusService extends Service {
@@ -12,7 +12,7 @@ class UserStatusService extends Service {
     
     /**
      * @param params Java type: org.cyclos.model.users.users.ChangeUserStatusParams
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserStatusService.html#changeStatus(org.cyclos.model.users.users.ChangeUserStatusParams)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/UserStatusService.html#changeStatus(org.cyclos.model.users.users.ChangeUserStatusParams)
      */
     public function changeStatus($params) {
         $this->run('changeStatus', array($params));
@@ -21,7 +21,7 @@ class UserStatusService extends Service {
     /**
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.users.users.ChangeUserStatusData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserStatusService.html#getData(org.cyclos.model.users.users.UserLocatorVO)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/UserStatusService.html#getData(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function getData($locator) {
         return $this->run('getData', array($locator));

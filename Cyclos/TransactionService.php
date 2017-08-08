@@ -1,7 +1,7 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html 
+ * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class TransactionService extends Service {
@@ -13,7 +13,7 @@ class TransactionService extends Service {
     /**
      * @param query Java type: org.cyclos.model.banking.transactions.MaturityTableQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getMaturityTable(org.cyclos.model.banking.transactions.MaturityTableQuery)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getMaturityTable(org.cyclos.model.banking.transactions.MaturityTableQuery)
      */
     public function getMaturityTable($query) {
         return $this->run('getMaturityTable', array($query));
@@ -22,7 +22,7 @@ class TransactionService extends Service {
     /**
      * @param from Java type: org.cyclos.model.banking.accounts.InternalAccountOwner     * @param to Java type: org.cyclos.model.banking.accounts.InternalAccountOwner
      * @return Java type: org.cyclos.model.banking.transactions.PerformPaymentData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getPaymentData(org.cyclos.model.banking.accounts.InternalAccountOwner,%20org.cyclos.model.banking.accounts.InternalAccountOwner)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getPaymentData(org.cyclos.model.banking.accounts.InternalAccountOwner,%20org.cyclos.model.banking.accounts.InternalAccountOwner)
      */
     public function getPaymentData($from, $to) {
         return $this->run('getPaymentData', array($from, $to));
@@ -31,25 +31,25 @@ class TransactionService extends Service {
     /**
      * @param from Java type: org.cyclos.model.banking.accounts.InternalAccountOwner     * @param to Java type: org.cyclos.model.banking.accounts.InternalAccountOwner
      * @return Java type: org.cyclos.model.banking.transactions.PerformPaymentToOwnerData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getPaymentToOwnerData(org.cyclos.model.banking.accounts.InternalAccountOwner,%20org.cyclos.model.banking.accounts.InternalAccountOwner)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getPaymentToOwnerData(org.cyclos.model.banking.accounts.InternalAccountOwner,%20org.cyclos.model.banking.accounts.InternalAccountOwner)
      */
     public function getPaymentToOwnerData($from, $to) {
         return $this->run('getPaymentToOwnerData', array($from, $to));
     }
     
     /**
-     * @param from Java type: org.cyclos.model.banking.accounts.InternalAccountOwner     * @param to Java type: org.cyclos.model.banking.accounts.InternalAccountOwner     * @param paymentTypeId Java type: java.lang.Long
+     * @param from Java type: org.cyclos.model.banking.accounts.InternalAccountOwner     * @param to Java type: org.cyclos.model.banking.accounts.InternalAccountOwner     * @param transferType Java type: org.cyclos.model.banking.transfertypes.TransferTypeVO
      * @return Java type: org.cyclos.model.banking.transactions.PerformPaymentTypeData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getPaymentTypeData(org.cyclos.model.banking.accounts.InternalAccountOwner,%20org.cyclos.model.banking.accounts.InternalAccountOwner,%20java.lang.Long)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getPaymentTypeData(org.cyclos.model.banking.accounts.InternalAccountOwner,%20org.cyclos.model.banking.accounts.InternalAccountOwner,%20org.cyclos.model.banking.transfertypes.TransferTypeVO)
      */
-    public function getPaymentTypeData($from, $to, $paymentTypeId) {
-        return $this->run('getPaymentTypeData', array($from, $to, $paymentTypeId));
+    public function getPaymentTypeData($from, $to, $transferType) {
+        return $this->run('getPaymentTypeData', array($from, $to, $transferType));
     }
     
     /**
 
      * @return Java type: org.cyclos.model.banking.transactions.ReceivePaymentData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getReceivePaymentData()
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getReceivePaymentData()
      */
     public function getReceivePaymentData() {
         return $this->run('getReceivePaymentData', array());
@@ -58,25 +58,25 @@ class TransactionService extends Service {
     /**
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.banking.transactions.ReceivePaymentFromUserData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getReceivePaymentFromUserData(org.cyclos.model.users.users.UserLocatorVO)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getReceivePaymentFromUserData(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function getReceivePaymentFromUserData($locator) {
         return $this->run('getReceivePaymentFromUserData', array($locator));
     }
     
     /**
-     * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param paymentTypeId Java type: java.lang.Long
+     * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param transferType Java type: org.cyclos.model.banking.transfertypes.TransferTypeVO
      * @return Java type: org.cyclos.model.banking.transactions.PerformPaymentTypeData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getReceivePaymentTypeData(org.cyclos.model.users.users.UserLocatorVO,%20java.lang.Long)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getReceivePaymentTypeData(org.cyclos.model.users.users.UserLocatorVO,%20org.cyclos.model.banking.transfertypes.TransferTypeVO)
      */
-    public function getReceivePaymentTypeData($locator, $paymentTypeId) {
-        return $this->run('getReceivePaymentTypeData', array($locator, $paymentTypeId));
+    public function getReceivePaymentTypeData($locator, $transferType) {
+        return $this->run('getReceivePaymentTypeData', array($locator, $transferType));
     }
     
     /**
      * @param owner Java type: org.cyclos.model.banking.accounts.InternalAccountOwner
      * @return Java type: org.cyclos.model.banking.transactions.TransactionSearchData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getSearchData(org.cyclos.model.banking.accounts.InternalAccountOwner)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#getSearchData(org.cyclos.model.banking.accounts.InternalAccountOwner)
      */
     public function getSearchData($owner) {
         return $this->run('getSearchData', array($owner));
@@ -85,7 +85,7 @@ class TransactionService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.transactions.TransactionVO
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#load(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#load(java.lang.Long)
      */
     public function load($id) {
         return $this->run('load', array($id));
@@ -94,7 +94,7 @@ class TransactionService extends Service {
     /**
      * @param transactionNumber Java type: java.lang.String
      * @return Java type: org.cyclos.model.banking.transactions.TransactionVO
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#loadByTransactionNumber(java.lang.String)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#loadByTransactionNumber(java.lang.String)
      */
     public function loadByTransactionNumber($transactionNumber) {
         return $this->run('loadByTransactionNumber', array($transactionNumber));
@@ -103,7 +103,7 @@ class TransactionService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#print(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#print(java.lang.Long)
      */
     public function _print($id) {
         return $this->run('print', array($id));
@@ -111,7 +111,7 @@ class TransactionService extends Service {
     
     /**
      * @param parameters Java type: org.cyclos.model.banking.transactions.PerformInternalTransactionDTO     * @param medium Java type: org.cyclos.model.access.passwordtypes.OTPSendMedium
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#requestNewOTPForReceive(org.cyclos.model.banking.transactions.PerformInternalTransactionDTO,%20org.cyclos.model.access.passwordtypes.OTPSendMedium)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#requestNewOTPForReceive(org.cyclos.model.banking.transactions.PerformInternalTransactionDTO,%20org.cyclos.model.access.passwordtypes.OTPSendMedium)
      */
     public function requestNewOTPForReceive($parameters, $medium) {
         $this->run('requestNewOTPForReceive', array($parameters, $medium));
@@ -120,7 +120,7 @@ class TransactionService extends Service {
     /**
      * @param query Java type: org.cyclos.model.banking.transactions.TransactionQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionService.html#search(org.cyclos.model.banking.transactions.TransactionQuery)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/TransactionService.html#search(org.cyclos.model.banking.transactions.TransactionQuery)
      */
     public function search($query) {
         return $this->run('search', array($query));

@@ -1,7 +1,7 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/NotificationService.html 
+ * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/messaging/NotificationService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class NotificationService extends Service {
@@ -11,16 +11,16 @@ class NotificationService extends Service {
     }
     
     /**
-     * @param userId Java type: java.lang.Long
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#markAllRead(java.lang.Long)
+     * @param user Java type: org.cyclos.model.users.users.UserLocatorVO
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#markAllRead(org.cyclos.model.users.users.UserLocatorVO)
      */
-    public function markAllRead($userId) {
-        $this->run('markAllRead', array($userId));
+    public function markAllRead($user) {
+        $this->run('markAllRead', array($user));
     }
     
     /**
      * @param ids Java type: java.util.List
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#markAsRead(java.util.List)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#markAsRead(java.util.List)
      */
     public function markAsRead($ids) {
         $this->run('markAsRead', array($ids));
@@ -28,7 +28,7 @@ class NotificationService extends Service {
     
     /**
      * @param id Java type: java.lang.Long
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#remove(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#remove(java.lang.Long)
      */
     public function remove($id) {
         $this->run('remove', array($id));
@@ -36,7 +36,7 @@ class NotificationService extends Service {
     
     /**
      * @param notificationIds Java type: java.util.Collection
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#removeAll(java.util.Collection)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#removeAll(java.util.Collection)
      */
     public function removeAll($notificationIds) {
         $this->run('removeAll', array($notificationIds));
@@ -45,7 +45,7 @@ class NotificationService extends Service {
     /**
      * @param params Java type: org.cyclos.model.messaging.notifications.NotificationQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#search(org.cyclos.model.messaging.notifications.NotificationQuery)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/messaging/NotificationService.html#search(org.cyclos.model.messaging.notifications.NotificationQuery)
      */
     public function search($params) {
         return $this->run('search', array($params));

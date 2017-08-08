@@ -1,7 +1,7 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/UserAccountFeeLogService.html 
+ * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/UserAccountFeeLogService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class UserAccountFeeLogService extends Service {
@@ -13,7 +13,7 @@ class UserAccountFeeLogService extends Service {
     /**
      * @param accountFeeLogId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.accountfees.UserAccountFeeLogSearchData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/UserAccountFeeLogService.html#getSearchData(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/UserAccountFeeLogService.html#getSearchData(java.lang.Long)
      */
     public function getSearchData($accountFeeLogId) {
         return $this->run('getSearchData', array($accountFeeLogId));
@@ -22,7 +22,7 @@ class UserAccountFeeLogService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.accountfees.UserAccountFeeLogQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/UserAccountFeeLogService.html#search(org.cyclos.model.banking.accountfees.UserAccountFeeLogQuery)
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/UserAccountFeeLogService.html#search(org.cyclos.model.banking.accountfees.UserAccountFeeLogQuery)
      */
     public function search($params) {
         return $this->run('search', array($params));

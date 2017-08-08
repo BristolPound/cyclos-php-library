@@ -1,7 +1,7 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/FullTextDictionaryService.html 
+ * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/system/FullTextDictionaryService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
 class FullTextDictionaryService extends Service {
@@ -13,7 +13,7 @@ class FullTextDictionaryService extends Service {
     /**
 
      * @return Java type: java.util.List
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/FullTextDictionaryService.html#list()
+     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/system/FullTextDictionaryService.html#list()
      */
     public function _list() {
         return $this->run('list', array());
