@@ -19,3 +19,5 @@ class ServiceException extends \Exception {
 		$this->error = $error;
 	}
 }
+
+?>

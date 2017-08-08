@@ -10,7 +10,7 @@ class Service {
 		$this->urlSuffix = $urlSuffix;
 	}
 	
-	protected function run($operation, $params) {
+	protected function __run($operation, $params) {
 		// Setup curl
 		$url = Configuration::url($this->urlSuffix);
 		$ch = \curl_init($url);
@@ -37,3 +37,5 @@ class Service {
 		}
 	}
 }
+
+?>

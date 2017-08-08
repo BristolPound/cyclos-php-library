@@ -1,9 +1,9 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/messaging/SmsService.html
+ * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/messaging/SmsService.html
  * 
- * Generated with Cyclos 4.6
+ * Generated with Cyclos 4.7.3
  * 
  * WARNING: The API is subject to change between revision versions
  * (for example, 4.5 to 4.6).
@@ -17,37 +17,39 @@ class SmsService extends Service {
     /**
      * @param smsMessageId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.messaging.messages.InboundSmsMessageVO
-     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/messaging/SmsService.html#getInboundMessageData(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/messaging/SmsService.html#getInboundMessageData(java.lang.Long)
      */
     public function getInboundMessageData($smsMessageId) {
-        return $this->run('getInboundMessageData', array($smsMessageId));
+        return $this->__run('getInboundMessageData', array($smsMessageId));
     }
     
     /**
      * @param smsMessageId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.messaging.messages.OutboundSmsMessageVO
-     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/messaging/SmsService.html#getOutboundMessageData(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/messaging/SmsService.html#getOutboundMessageData(java.lang.Long)
      */
     public function getOutboundMessageData($smsMessageId) {
-        return $this->run('getOutboundMessageData', array($smsMessageId));
+        return $this->__run('getOutboundMessageData', array($smsMessageId));
     }
     
     /**
      * @param query Java type: org.cyclos.model.messaging.messages.InboundSmsQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/messaging/SmsService.html#searchInboundMessages(org.cyclos.model.messaging.messages.InboundSmsQuery)
+     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/messaging/SmsService.html#searchInboundMessages(org.cyclos.model.messaging.messages.InboundSmsQuery)
      */
     public function searchInboundMessages($query) {
-        return $this->run('searchInboundMessages', array($query));
+        return $this->__run('searchInboundMessages', array($query));
     }
     
     /**
      * @param query Java type: org.cyclos.model.messaging.messages.OutboundSmsQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/messaging/SmsService.html#searchOutboundMessages(org.cyclos.model.messaging.messages.OutboundSmsQuery)
+     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/messaging/SmsService.html#searchOutboundMessages(org.cyclos.model.messaging.messages.OutboundSmsQuery)
      */
     public function searchOutboundMessages($query) {
-        return $this->run('searchOutboundMessages', array($query));
+        return $this->__run('searchOutboundMessages', array($query));
     }
     
 }
+
+?>

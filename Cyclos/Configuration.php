@@ -125,3 +125,5 @@ class Configuration {
         return $opts;
     }
 }
+
+?>

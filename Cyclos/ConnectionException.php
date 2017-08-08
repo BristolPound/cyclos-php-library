@@ -8,3 +8,5 @@ class ConnectionException extends \Exception {
 		parent::__construct("Error contacting the Cyclos server");
 	}
 }
+
+?>

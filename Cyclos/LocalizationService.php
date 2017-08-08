@@ -1,9 +1,9 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/system/LocalizationService.html
+ * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/system/LocalizationService.html
  * 
- * Generated with Cyclos 4.6
+ * Generated with Cyclos 4.7.3
  * 
  * WARNING: The API is subject to change between revision versions
  * (for example, 4.5 to 4.6).
@@ -17,28 +17,30 @@ class LocalizationService extends Service {
     /**
 
      * @return Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/system/LocalizationService.html#listCountries()
+     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/system/LocalizationService.html#listCountries()
      */
     public function listCountries() {
-        return $this->run('listCountries', array());
+        return $this->__run('listCountries', array());
     }
     
     /**
 
      * @return Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/system/LocalizationService.html#listTimeZones()
+     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/system/LocalizationService.html#listTimeZones()
      */
     public function listTimeZones() {
-        return $this->run('listTimeZones', array());
+        return $this->__run('listTimeZones', array());
     }
     
     /**
      * @param countryCode Java type: java.lang.String
      * @return Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/system/LocalizationService.html#listTimeZonesByCountry(java.lang.String)
+     * @see http://documentation.cyclos.org/4.7.3/ws-api-docs/org/cyclos/services/system/LocalizationService.html#listTimeZonesByCountry(java.lang.String)
      */
     public function listTimeZonesByCountry($countryCode) {
-        return $this->run('listTimeZonesByCountry', array($countryCode));
+        return $this->__run('listTimeZonesByCountry', array($countryCode));
     }
     
 }
+
+?>
