@@ -47,6 +47,7 @@ class PaymentService extends Service {
     }
     
     /**
+     * Generates a PDF file for a payment details
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/PaymentService.html#printPayment(java.lang.Long)

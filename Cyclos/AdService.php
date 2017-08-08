@@ -13,12 +13,12 @@ class AdService extends Service {
     
     /**
      * Returns data for searching advertisements
-     * @param type Java type: org.cyclos.model.marketplace.advertisements.AdType
+     * @param type Java type: org.cyclos.model.marketplace.advertisements.AdType     * @param overBrokeredUsers Java type: boolean
      * @return Java type: org.cyclos.model.marketplace.advertisements.AdSearchData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdService.html#getAdSearchData(org.cyclos.model.marketplace.advertisements.AdType)
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdService.html#getAdSearchData(org.cyclos.model.marketplace.advertisements.AdType,%20boolean)
      */
-    public function getAdSearchData($type) {
-        return $this->run('getAdSearchData', array($type));
+    public function getAdSearchData($type, $overBrokeredUsers) {
+        return $this->run('getAdSearchData', array($type, $overBrokeredUsers));
     }
     
     /**
@@ -72,6 +72,8 @@ class AdService extends Service {
     }
     
     /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/marketplace/AdService.html#load(java.lang.Long)

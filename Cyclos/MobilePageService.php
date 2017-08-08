@@ -1,6 +1,7 @@
 <?php namespace Cyclos;
 
 /**
+ * Service for mobile pages
  * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/MobilePageService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -41,16 +42,28 @@ class MobilePageService extends Service {
     }
     
     /**
-     * Returns all mobile pages for the given configuration
+     * Returns data with a list of mobile pages in a given configuration
      * @param configurationId Java type: java.lang.Long
-     * @return Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/MobilePageService.html#listByConfiguration(java.lang.Long)
+     * @return Java type: org.cyclos.model.contentmanagement.mobilepages.MobilePagesListData
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/MobilePageService.html#getListData(java.lang.Long)
      */
-    public function listByConfiguration($configurationId) {
-        return $this->run('listByConfiguration', array($configurationId));
+    public function getListData($configurationId) {
+        return $this->run('getListData', array($configurationId));
     }
     
     /**
+     * Lists all mobile pages for the given configuration
+     * @param configurationId Java type: java.lang.Long
+     * @return Java type: java.util.List
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/MobilePageService.html#list(java.lang.Long)
+     */
+    public function _list($configurationId) {
+        return $this->run('list', array($configurationId));
+    }
+    
+    /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/MobilePageService.html#load(java.lang.Long)

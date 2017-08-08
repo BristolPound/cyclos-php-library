@@ -32,6 +32,29 @@ class SmsOperationConfigurationService extends Service {
     }
     
     /**
+     * Returns data for listing sms texts
+     * @param smsChannelConfigurationId Java type: java.lang.Long
+     * @return Java type: org.cyclos.model.system.smsoperationconfigurations.SmsTextsListData
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/SmsOperationConfigurationService.html#getSmsTextsListData(java.lang.Long)
+     */
+    public function getSmsTextsListData($smsChannelConfigurationId) {
+        return $this->run('getSmsTextsListData', array($smsChannelConfigurationId));
+    }
+    
+    /**
+     * Returns all sms text operation configurations for the given channel
+     * configuration
+     * @param smsChannelConfigurationId Java type: java.lang.Long
+     * @return Java type: java.util.List
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/SmsOperationConfigurationService.html#listSmsTexts(java.lang.Long)
+     */
+    public function listSmsTexts($smsChannelConfigurationId) {
+        return $this->run('listSmsTexts', array($smsChannelConfigurationId));
+    }
+    
+    /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/SmsOperationConfigurationService.html#load(java.lang.Long)

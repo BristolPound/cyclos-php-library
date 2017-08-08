@@ -14,6 +14,8 @@ class ConfigurationImageService extends Service {
     }
     
     /**
+     * Returns the content of a given configuration image, for the given
+     * configuration
      * @param configurationId Java type: java.lang.Long     * @param type Java type: org.cyclos.model.system.configurations.ConfigurationImageType
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationImageService.html#getImageContent(java.lang.Long,%20org.cyclos.model.system.configurations.ConfigurationImageType)
@@ -27,23 +29,33 @@ class ConfigurationImageService extends Service {
      * inherited images from parent configurations. Passing null as
      * configurationId will get the image from the logged user's
      * configuration.
-     * @param configurationId Java type: java.lang.Long     * @param type Java type: org.cyclos.model.system.configurations.ConfigurationImageType     * @param includeAncestors Java type: boolean
+     * @param configurationId Java type: java.lang.Long     * @param type Java type: org.cyclos.model.system.configurations.ConfigurationImageType
      * @return Java type: org.cyclos.model.system.configurations.ConfigurationImageVO
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationImageService.html#getImageVO(java.lang.Long,%20org.cyclos.model.system.configurations.ConfigurationImageType,%20boolean)
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationImageService.html#getImageVO(java.lang.Long,%20org.cyclos.model.system.configurations.ConfigurationImageType)
      */
-    public function getImageVO($configurationId, $type, $includeAncestors) {
-        return $this->run('getImageVO', array($configurationId, $type, $includeAncestors));
+    public function getImageVO($configurationId, $type) {
+        return $this->run('getImageVO', array($configurationId, $type));
+    }
+    
+    /**
+     * Returns data to list images in a given configuration
+     * @param configurationId Java type: java.lang.Long
+     * @return Java type: org.cyclos.model.system.images.ConfigurationImagesListData
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationImageService.html#getListData(java.lang.Long)
+     */
+    public function getListData($configurationId) {
+        return $this->run('getListData', array($configurationId));
     }
     
     /**
      * Lists a configuration's images, optionally including inherited images
      * from parent configurations
-     * @param configurationId Java type: java.lang.Long     * @param includeAncestors Java type: boolean
+     * @param configurationId Java type: java.lang.Long
      * @return Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationImageService.html#list(java.lang.Long,%20boolean)
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationImageService.html#list(java.lang.Long)
      */
-    public function _list($configurationId, $includeAncestors) {
-        return $this->run('list', array($configurationId, $includeAncestors));
+    public function _list($configurationId) {
+        return $this->run('list', array($configurationId));
     }
     
     /**
@@ -67,6 +79,8 @@ class ConfigurationImageService extends Service {
     }
     
     /**
+     * Reads the contents for the image with the given id, with the specified
+     * size
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationImageService.html#readContent(java.lang.Long)
@@ -76,6 +90,8 @@ class ConfigurationImageService extends Service {
     }
     
     /**
+     * Reads the contents for the image with the given key, with the
+     * specified size
      * @param key Java type: java.lang.String
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationImageService.html#readContentByKey(java.lang.String)
@@ -104,6 +120,8 @@ class ConfigurationImageService extends Service {
     }
     
     /**
+     * Saves the given image for the given parameter (which depends on each
+     * image type), returning the descriptor
      * @param param Java type: NP     * @param name Java type: java.lang.String     * @param contents Java type: org.cyclos.server.utils.SerializableInputStream     * @param contentType Java type: java.lang.String
      * @return Java type: VO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationImageService.html#save(NP,%20java.lang.String,%20org.cyclos.server.utils.SerializableInputStream,%20java.lang.String)

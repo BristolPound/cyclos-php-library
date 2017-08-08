@@ -44,6 +44,8 @@ class UserCustomImageService extends Service {
     }
     
     /**
+     * Reads the contents for the image with the given id, with the specified
+     * size
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/UserCustomImageService.html#readContent(java.lang.Long)
@@ -53,6 +55,8 @@ class UserCustomImageService extends Service {
     }
     
     /**
+     * Reads the contents for the image with the given key, with the
+     * specified size
      * @param key Java type: java.lang.String
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/UserCustomImageService.html#readContentByKey(java.lang.String)
@@ -71,6 +75,8 @@ class UserCustomImageService extends Service {
     }
     
     /**
+     * Saves the given image for the given parameter (which depends on each
+     * image type), returning the descriptor
      * @param param Java type: NP     * @param name Java type: java.lang.String     * @param contents Java type: org.cyclos.server.utils.SerializableInputStream     * @param contentType Java type: java.lang.String
      * @return Java type: VO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/UserCustomImageService.html#save(NP,%20java.lang.String,%20org.cyclos.server.utils.SerializableInputStream,%20java.lang.String)

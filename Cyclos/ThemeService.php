@@ -12,6 +12,20 @@ class ThemeService extends Service {
     }
     
     /**
+     * Applies the given themes to the given configuration: one for logged
+     * user, one for guests and another for mobile. Passing null means the
+     * theme will be inherited from parent configurations, but is not
+     * possible for the system default configuration. The themes must be
+     * defined within that configuration or in any of it's ancestors.
+     * @param configurationId Java type: java.lang.Long     * @param usersThemeId Java type: java.lang.Long     * @param guestsThemeId Java type: java.lang.Long     * @param mobileThemeId Java type: java.lang.Long
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeService.html#applyThemes(java.lang.Long,%20java.lang.Long,%20java.lang.Long,%20java.lang.Long)
+     */
+    public function applyThemes($configurationId, $usersThemeId, $guestsThemeId, $mobileThemeId) {
+        $this->run('applyThemes', array($configurationId, $usersThemeId, $guestsThemeId, $mobileThemeId));
+    }
+    
+    /**
+     * Exports the given theme
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeService.html#export(java.lang.Long)
@@ -21,6 +35,7 @@ class ThemeService extends Service {
     }
     
     /**
+     * Returns the CSS corresponding to the theme with the given id
      * @param id Java type: java.lang.Long
      * @return Java type: java.lang.String
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeService.html#getCSS(java.lang.Long)
@@ -50,6 +65,16 @@ class ThemeService extends Service {
     }
     
     /**
+     * Returns data to list themes in a configuration
+     * @param configurationId Java type: java.lang.Long
+     * @return Java type: org.cyclos.model.contentmanagement.themes.ThemesListData
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeService.html#getListData(java.lang.Long)
+     */
+    public function getListData($configurationId) {
+        return $this->run('getListData', array($configurationId));
+    }
+    
+    /**
      * Loads the theme vo with the given id
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.contentmanagement.themes.ThemeVO
@@ -60,6 +85,8 @@ class ThemeService extends Service {
     }
     
     /**
+     * Import the theme definitions from file, creating it on the given
+     * configuration, returning the new theme id
      * @param configurationId Java type: java.lang.Long     * @param importedFromFile Java type: java.lang.String     * @param in Java type: org.cyclos.server.utils.SerializableInputStream
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeService.html#importNew(java.lang.Long,%20java.lang.String,%20org.cyclos.server.utils.SerializableInputStream)
@@ -71,15 +98,17 @@ class ThemeService extends Service {
     /**
      * Returns a list with visible themes on the given configuration sorted
      * by theme type (first main web themes)
-     * @param configurationId Java type: java.lang.Long     * @param includeAncestors Java type: boolean
+     * @param configurationId Java type: java.lang.Long
      * @return Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeService.html#list(java.lang.Long,%20boolean)
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeService.html#list(java.lang.Long)
      */
-    public function _list($configurationId, $includeAncestors) {
-        return $this->run('list', array($configurationId, $includeAncestors));
+    public function _list($configurationId) {
+        return $this->run('list', array($configurationId));
     }
     
     /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeService.html#load(java.lang.Long)

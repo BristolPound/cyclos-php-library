@@ -22,16 +22,8 @@ class TranslationMessageService extends Service {
     }
     
     /**
-     * Returns all the translation messages for the given submodules
-     * @param submodules Java type: java.util.Set
-     * @return Java type: org.cyclos.model.contentmanagement.translations.TranslationsData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/TranslationMessageService.html#getBySubmodules(java.util.Set)
-     */
-    public function getBySubmodules($submodules) {
-        return $this->run('getBySubmodules', array($submodules));
-    }
-    
-    /**
+     * Returns all customized keys for the given language, in form of a
+     * Properties object
      * @param languageId Java type: java.lang.Long
      * @return Java type: java.util.Properties
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/TranslationMessageService.html#getCustomizedKeysPerLanguage(java.lang.Long)
@@ -58,15 +50,6 @@ class TranslationMessageService extends Service {
      */
     public function getTranslationKeyData($languageId, $key) {
         return $this->run('getTranslationKeyData', array($languageId, $key));
-    }
-    
-    /**
-     * @param key Java type: org.cyclos.utils.MessageKey     * @param arguments Java type: java.lang.Object
-     * @return Java type: java.lang.String
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/TranslationMessageService.html#message(org.cyclos.utils.MessageKey,%20java.lang.Object)
-     */
-    public function message($key, $arguments) {
-        return $this->run('message', array($key, $arguments));
     }
     
     /**
@@ -98,6 +81,7 @@ class TranslationMessageService extends Service {
     }
     
     /**
+     * Set the customized keys for a language
      * @param keys Java type: java.util.Properties     * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/TranslationMessageService.html#setCustomizedKeysPerLanguage(java.util.Properties,%20java.lang.Long)
      */

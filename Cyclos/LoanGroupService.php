@@ -51,6 +51,8 @@ class LoanGroupService extends Service {
     }
     
     /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/LoanGroupService.html#load(java.lang.Long)

@@ -1,6 +1,7 @@
 <?php namespace Cyclos;
 
 /**
+ * Service for a configuration's static content
  * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/StaticContentService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -41,6 +42,16 @@ class StaticContentService extends Service {
     }
     
     /**
+     * Returns data to list the static contents of a given configuration
+     * @param configurationId Java type: java.lang.Long
+     * @return Java type: org.cyclos.model.contentmanagement.staticcontents.StaticContentListData
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/StaticContentService.html#getListData(java.lang.Long)
+     */
+    public function getListData($configurationId) {
+        return $this->run('getListData', array($configurationId));
+    }
+    
+    /**
      * @return the sms help content. Note for version 4.0.3.x: at this moment
      * only the role admin is supported.
      * @param role Java type: org.cyclos.model.access.Role
@@ -52,6 +63,18 @@ class StaticContentService extends Service {
     }
     
     /**
+     * Lists the static contents of a given configuration
+     * @param configurationId Java type: java.lang.Long
+     * @return Java type: java.util.List
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/StaticContentService.html#list(java.lang.Long)
+     */
+    public function _list($configurationId) {
+        return $this->run('list', array($configurationId));
+    }
+    
+    /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/StaticContentService.html#load(java.lang.Long)

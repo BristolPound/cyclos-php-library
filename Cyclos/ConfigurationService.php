@@ -12,19 +12,6 @@ class ConfigurationService extends Service {
     }
     
     /**
-     * Applies the given themes to the given configuration: one for logged
-     * user, one for guests and another for mobile. Passing null means the
-     * theme will be inherited from parent configurations, but is not
-     * possible for the system default configuration. The themes must be
-     * defined within that configuration or in any of it's ancestors.
-     * @param configurationId Java type: java.lang.Long     * @param usersThemeId Java type: java.lang.Long     * @param guestsThemeId Java type: java.lang.Long     * @param mobileThemeId Java type: java.lang.Long
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationService.html#applyThemes(java.lang.Long,%20java.lang.Long,%20java.lang.Long,%20java.lang.Long)
-     */
-    public function applyThemes($configurationId, $usersThemeId, $guestsThemeId, $mobileThemeId) {
-        $this->run('applyThemes', array($configurationId, $usersThemeId, $guestsThemeId, $mobileThemeId));
-    }
-    
-    /**
      * Returns the active configuration for the configuration with the given
      * id
      * @param id Java type: java.lang.Long
@@ -33,16 +20,6 @@ class ConfigurationService extends Service {
      */
     public function getActiveConfiguration($id) {
         return $this->run('getActiveConfiguration', array($id));
-    }
-    
-    /**
-     * Returns data related to the banners for the given configuration
-     * @param configurationId Java type: java.lang.Long
-     * @return Java type: org.cyclos.model.system.configurations.ConfigurationBannersData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationService.html#getBannersData(java.lang.Long)
-     */
-    public function getBannersData($configurationId) {
-        return $this->run('getBannersData', array($configurationId));
     }
     
     /**
@@ -77,36 +54,6 @@ class ConfigurationService extends Service {
     }
     
     /**
-     * Returns data related to the images for the given configuration
-     * @param configurationId Java type: java.lang.Long
-     * @return Java type: org.cyclos.model.system.configurations.ConfigurationImagesData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationService.html#getImagesData(java.lang.Long)
-     */
-    public function getImagesData($configurationId) {
-        return $this->run('getImagesData', array($configurationId));
-    }
-    
-    /**
-     * Returns data related to the menu for the given configuration
-     * @param configurationId Java type: java.lang.Long
-     * @return Java type: org.cyclos.model.system.configurations.ConfigurationMenuData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationService.html#getMenuData(java.lang.Long)
-     */
-    public function getMenuData($configurationId) {
-        return $this->run('getMenuData', array($configurationId));
-    }
-    
-    /**
-     * Returns data related to the themes for the given configuration
-     * @param configurationId Java type: java.lang.Long
-     * @return Java type: org.cyclos.model.system.configurations.ConfigurationThemesData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationService.html#getThemesData(java.lang.Long)
-     */
-    public function getThemesData($configurationId) {
-        return $this->run('getThemesData', array($configurationId));
-    }
-    
-    /**
      * Returns all visible configurations
 
      * @return Java type: java.util.List
@@ -117,6 +64,8 @@ class ConfigurationService extends Service {
     }
     
     /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ConfigurationService.html#load(java.lang.Long)

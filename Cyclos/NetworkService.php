@@ -52,12 +52,27 @@ class NetworkService extends Service {
     }
     
     /**
+     * It returns the full (root URL + root path) network's URL if not empty.
+     * Otherwise it returns the default configuration's root URL plus the
+     * network's root path (if not empty). @return the resolved network's
+     * full url always ending with a slash ('/')
      * @param networkId Java type: java.lang.Long
      * @return Java type: java.lang.String
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/NetworkService.html#getFullURL(java.lang.Long)
      */
     public function getFullURL($networkId) {
         return $this->run('getFullURL', array($networkId));
+    }
+    
+    /**
+     * Returns an initial data pre-populated with fields according to the
+     * given initial selections
+     * @param basicData Java type: org.cyclos.model.system.networks.BasicNetworkInitialDataDTO
+     * @return Java type: org.cyclos.model.system.networks.NetworkInitialDataDTO
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/NetworkService.html#getInitialData(org.cyclos.model.system.networks.BasicNetworkInitialDataDTO)
+     */
+    public function getInitialData($basicData) {
+        return $this->run('getInitialData', array($basicData));
     }
     
     /**
@@ -71,6 +86,8 @@ class NetworkService extends Service {
     }
     
     /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/NetworkService.html#load(java.lang.Long)

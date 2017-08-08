@@ -13,6 +13,7 @@ class ThemeImageService extends Service {
     }
     
     /**
+     * Returns the content of an image, according to the given image nature
      * @param themeId Java type: java.lang.Long     * @param type Java type: org.cyclos.model.contentmanagement.themes.ThemeImageType     * @param name Java type: java.lang.String     * @param colors Java type: java.util.List
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeImageService.html#getImageContent(java.lang.Long,%20org.cyclos.model.contentmanagement.themes.ThemeImageType,%20java.lang.String,%20java.util.List)
@@ -63,6 +64,8 @@ class ThemeImageService extends Service {
     }
     
     /**
+     * Reads the contents for the image with the given id, with the specified
+     * size
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeImageService.html#readContent(java.lang.Long)
@@ -72,6 +75,8 @@ class ThemeImageService extends Service {
     }
     
     /**
+     * Reads the contents for the image with the given key, with the
+     * specified size
      * @param key Java type: java.lang.String
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeImageService.html#readContentByKey(java.lang.String)
@@ -90,6 +95,8 @@ class ThemeImageService extends Service {
     }
     
     /**
+     * Saves the given image for the given parameter (which depends on each
+     * image type), returning the descriptor
      * @param param Java type: NP     * @param name Java type: java.lang.String     * @param contents Java type: org.cyclos.server.utils.SerializableInputStream     * @param contentType Java type: java.lang.String
      * @return Java type: VO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/ThemeImageService.html#save(NP,%20java.lang.String,%20org.cyclos.server.utils.SerializableInputStream,%20java.lang.String)

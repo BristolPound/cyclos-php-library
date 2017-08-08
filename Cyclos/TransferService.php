@@ -23,6 +23,7 @@ class TransferService extends Service {
     }
     
     /**
+     * Generates a PDF file for a transfer details
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/TransferService.html#printTransfer(java.lang.Long)

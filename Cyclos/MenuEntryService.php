@@ -32,6 +32,16 @@ class MenuEntryService extends Service {
     }
     
     /**
+     * Returns data with the list of menus for the given configuration
+     * @param configurationId Java type: java.lang.Long
+     * @return Java type: org.cyclos.model.contentmanagement.contentitems.MenuEntriesListData
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/MenuEntryService.html#getListData(java.lang.Long)
+     */
+    public function getListData($configurationId) {
+        return $this->run('getListData', array($configurationId));
+    }
+    
+    /**
      * Returns details for the given menu item
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.contentmanagement.contentitems.MenuItemDetailedVO
@@ -42,16 +52,18 @@ class MenuEntryService extends Service {
     }
     
     /**
-     * Lists all menu entries for the given configuration
-     * @param configurationId Java type: java.lang.Long     * @param includeAncestors Java type: boolean
+     * Lists menu entries in the given configuration
+     * @param configurationId Java type: java.lang.Long
      * @return Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/MenuEntryService.html#list(java.lang.Long,%20boolean)
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/MenuEntryService.html#list(java.lang.Long)
      */
-    public function _list($configurationId, $includeAncestors) {
-        return $this->run('list', array($configurationId, $includeAncestors));
+    public function _list($configurationId) {
+        return $this->run('list', array($configurationId));
     }
     
     /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/MenuEntryService.html#load(java.lang.Long)

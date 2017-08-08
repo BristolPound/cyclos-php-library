@@ -32,16 +32,28 @@ class BannerService extends Service {
     }
     
     /**
-     * Lists all banners for the given configuration
-     * @param configurationId Java type: java.lang.Long     * @param includeAncestors Java type: boolean
-     * @return Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/BannerService.html#list(java.lang.Long,%20boolean)
+     * Returns data to list banners in a given configuration
+     * @param configurationId Java type: java.lang.Long
+     * @return Java type: org.cyclos.model.contentmanagement.contentitems.BannersListData
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/BannerService.html#getListData(java.lang.Long)
      */
-    public function _list($configurationId, $includeAncestors) {
-        return $this->run('list', array($configurationId, $includeAncestors));
+    public function getListData($configurationId) {
+        return $this->run('getListData', array($configurationId));
     }
     
     /**
+     * Lists all banners for the given configuration
+     * @param configurationId Java type: java.lang.Long
+     * @return Java type: java.util.List
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/BannerService.html#list(java.lang.Long)
+     */
+    public function _list($configurationId) {
+        return $this->run('list', array($configurationId));
+    }
+    
+    /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/BannerService.html#load(java.lang.Long)
@@ -85,15 +97,6 @@ class BannerService extends Service {
      */
     public function save($object) {
         return $this->run('save', array($object));
-    }
-    
-    /**
-     * Updates the order field according to the given ids sequence
-     * @param ids Java type: java.util.List
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/BannerService.html#saveOrder(java.util.List)
-     */
-    public function saveOrder($ids) {
-        $this->run('saveOrder', array($ids));
     }
     
 }

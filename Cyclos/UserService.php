@@ -74,14 +74,13 @@ class UserService extends Service {
     }
     
     /**
-     * Gets data used on the search page, either for brokered users, pending
-     * users or general users search
-     * @param brokeredUsers Java type: boolean     * @param pendingUsers Java type: boolean
+     * Gets data used on the search page, according to the given search type
+     * @param context Java type: org.cyclos.model.users.users.UserSearchContext
      * @return Java type: org.cyclos.model.users.users.UserSearchData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#getSearchData(boolean,%20boolean)
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#getSearchData(org.cyclos.model.users.users.UserSearchContext)
      */
-    public function getSearchData($brokeredUsers, $pendingUsers) {
-        return $this->run('getSearchData', array($brokeredUsers, $pendingUsers));
+    public function getSearchData($context) {
+        return $this->run('getSearchData', array($context));
     }
     
     /**
@@ -105,6 +104,8 @@ class UserService extends Service {
     }
     
     /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#load(java.lang.Long)
@@ -128,6 +129,7 @@ class UserService extends Service {
     }
     
     /**
+     * Generates the PDF content for an user listing
      * @param query Java type: org.cyclos.model.users.users.UserQuery
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#printUsers(org.cyclos.model.users.users.UserQuery)
@@ -186,6 +188,15 @@ class UserService extends Service {
     }
     
     /**
+     * Re-sends the e-mail change e-mail to an user
+     * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#resendEmailChangeMail(org.cyclos.model.users.users.UserLocatorVO)
+     */
+    public function resendEmailChangeMail($locator) {
+        $this->run('resendEmailChangeMail', array($locator));
+    }
+    
+    /**
      * Re-sends the validation mail to a pending user
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#resendValidationMail(org.cyclos.model.users.users.UserLocatorVO)
@@ -215,17 +226,6 @@ class UserService extends Service {
     }
     
     /**
-     * Search brokered users according to the specified query parameters The
-     * query must have set the broker.
-     * @param query Java type: org.cyclos.model.users.users.UserQuery
-     * @return Java type: org.cyclos.utils.Page
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#searchBrokered(org.cyclos.model.users.users.UserQuery)
-     */
-    public function searchBrokered($query) {
-        return $this->run('searchBrokered', array($query));
-    }
-    
-    /**
      * Updates user information status according to the given activity
      * @param type Java type: org.cyclos.model.users.users.UserActivityType
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#updateUserActivity(org.cyclos.model.users.users.UserActivityType)
@@ -235,14 +235,25 @@ class UserService extends Service {
     }
     
     /**
-     * Validate used when the user validate his registration using the
-     * provided key
+     * Validate an e-mail change for the given validation key, returning the
+     * affected user identifier
+     * @param validationKey Java type: java.lang.String
+     * @return Java type: java.lang.Long
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#validateEmailChange(java.lang.String)
+     */
+    public function validateEmailChange($validationKey) {
+        return $this->run('validateEmailChange', array($validationKey));
+    }
+    
+    /**
+     * Validate user registration which was pending e-mail verification, via
+     * a provided key
      * @param validationKey Java type: java.lang.String
      * @return Java type: org.cyclos.model.users.users.UserValidationData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#validateKey(java.lang.String)
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/UserService.html#validateRegistration(java.lang.String)
      */
-    public function validateKey($validationKey) {
-        return $this->run('validateKey', array($validationKey));
+    public function validateRegistration($validationKey) {
+        return $this->run('validateRegistration', array($validationKey));
     }
     
 }

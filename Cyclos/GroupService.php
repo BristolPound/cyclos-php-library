@@ -64,6 +64,8 @@ class GroupService extends Service {
     }
     
     /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/GroupService.html#load(java.lang.Long)
@@ -88,22 +90,6 @@ class GroupService extends Service {
      */
     public function removeAll($ids) {
         $this->run('removeAll', array($ids));
-    }
-    
-    /**
-     * removes or disables a group. If a groupset, the groupset's groups must
-     * have no users, or the group must not have products directly assigned
-     * to it, in order to be removable. Otherwise a validationException is
-     * raised. If a group, it must have no users, otherwise a
-     * validationException is raised. If it has no users and does not exist
-     * in the group history log then it is removed; if it has no users but
-     * does exist in the group history log, then it will be disabled.
-     * @param id Java type: java.lang.Long
-     * @return Java type: boolean
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/users/GroupService.html#removeOrDisable(java.lang.Long)
-     */
-    public function removeOrDisable($id) {
-        return $this->run('removeOrDisable', array($id));
     }
     
     /**

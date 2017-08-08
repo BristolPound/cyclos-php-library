@@ -52,12 +52,12 @@ class DocumentService extends Service {
     
     /**
      * Returns data used to search documents
-
+     * @param query Java type: org.cyclos.model.contentmanagement.documents.DocumentQuery
      * @return Java type: org.cyclos.model.contentmanagement.documents.DocumentSearchData
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/DocumentService.html#getDocumentSearchData()
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/DocumentService.html#getDocumentSearchData(org.cyclos.model.contentmanagement.documents.DocumentQuery)
      */
-    public function getDocumentSearchData() {
-        return $this->run('getDocumentSearchData', array());
+    public function getDocumentSearchData($query) {
+        return $this->run('getDocumentSearchData', array($query));
     }
     
     /**
@@ -82,6 +82,8 @@ class DocumentService extends Service {
     }
     
     /**
+     * Loads a DTO for the entity with the given id, ensuring that the logged
+     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/contentmanagement/DocumentService.html#load(java.lang.Long)

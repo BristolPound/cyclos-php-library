@@ -54,14 +54,24 @@ class AccountService extends Service {
     }
     
     /**
+     * Returns data to search for users with balances
+
+     * @return Java type: org.cyclos.model.banking.accounts.UserWithBalanceSearchData
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountService.html#getUserWithBalanceSearchData()
+     */
+    public function getUserWithBalanceSearchData() {
+        return $this->run('getUserWithBalanceSearchData', array());
+    }
+    
+    /**
      * Returns true if the logged user has at least one account. The logged
      * user invoking this method should be a member
 
      * @return Java type: boolean
-     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountService.html#hasAccounts()
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountService.html#hasAccessibleAccounts()
      */
-    public function hasAccounts() {
-        return $this->run('hasAccounts', array());
+    public function hasAccessibleAccounts() {
+        return $this->run('hasAccessibleAccounts', array());
     }
     
     /**
@@ -75,13 +85,35 @@ class AccountService extends Service {
     }
     
     /**
-     * Searches the account history entries for the given query parameters
+     * Genertes a PDF with the account history entries for the given query
+     * parameters.
+     * @param params Java type: org.cyclos.model.banking.accounts.AccountHistoryQuery
+     * @return Java type: org.cyclos.server.utils.SerializableInputStream
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountService.html#printAccountHistory(org.cyclos.model.banking.accounts.AccountHistoryQuery)
+     */
+    public function printAccountHistory($params) {
+        return $this->run('printAccountHistory', array($params));
+    }
+    
+    /**
+     * Searches the account history entries for the given query parameters.
      * @param params Java type: org.cyclos.model.banking.accounts.AccountHistoryQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountService.html#searchAccountHistory(org.cyclos.model.banking.accounts.AccountHistoryQuery)
      */
     public function searchAccountHistory($params) {
         return $this->run('searchAccountHistory', array($params));
+    }
+    
+    /**
+     * Searches for users together with their respective account balances,
+     * returning not only the users, but also an overview
+     * @param params Java type: org.cyclos.model.banking.accounts.UserWithBalanceQuery
+     * @return Java type: org.cyclos.model.banking.accounts.UsersWithBalancesResult
+     * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/banking/AccountService.html#searchUsersWithBalances(org.cyclos.model.banking.accounts.UserWithBalanceQuery)
+     */
+    public function searchUsersWithBalances($params) {
+        return $this->run('searchUsersWithBalances', array($params));
     }
     
     /**

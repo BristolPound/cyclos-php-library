@@ -32,6 +32,7 @@ class LicenseService extends Service {
     }
     
     /**
+     * Updates the license offline
      * @param in Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/LicenseService.html#offlineUpdate(org.cyclos.server.utils.SerializableInputStream)
      */

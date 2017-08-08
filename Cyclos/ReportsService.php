@@ -21,6 +21,9 @@ class ReportsService extends Service {
     }
     
     /**
+     * Generates a PDF content for a system report, showing reports on the
+     * complete system. Note that if the query has no groups selected, the
+     * method assumes that all visible groups are to be selected.
      * @param query Java type: org.cyclos.model.system.reports.SystemReportsQuery
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ReportsService.html#runSystemReports(org.cyclos.model.system.reports.SystemReportsQuery)
@@ -30,6 +33,7 @@ class ReportsService extends Service {
     }
     
     /**
+     * Generates a PDF content for an user report
      * @param query Java type: org.cyclos.model.system.reports.UserReportQuery
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/ReportsService.html#runUsersReport(org.cyclos.model.system.reports.UserReportQuery)

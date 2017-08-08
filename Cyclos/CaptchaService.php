@@ -22,6 +22,7 @@ class CaptchaService extends Service {
     }
     
     /**
+     * Returns the image which corresponds to the given id
      * @param id Java type: java.lang.Long     * @param groupId Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/CaptchaService.html#getImage(java.lang.Long,%20java.lang.Long)
@@ -31,6 +32,7 @@ class CaptchaService extends Service {
     }
     
     /**
+     * Returns whether the captcha challenge is valid
      * @param id Java type: java.lang.Long     * @param text Java type: java.lang.String
      * @return Java type: boolean
      * @see http://www.cyclos.org/cyclos4documentation/api-javadoc/org/cyclos/services/system/CaptchaService.html#isValid(java.lang.Long,%20java.lang.String)
