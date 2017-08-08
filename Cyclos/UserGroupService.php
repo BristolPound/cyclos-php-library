@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for actions related to both groups and users.
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserGroupService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,8 +11,6 @@ class UserGroupService extends Service {
     }
     
     /**
-     * Changes the group of a user, returning the identifier of the group
-     * change log
      * @param dto Java type: org.cyclos.model.users.groups.ChangeGroupDTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserGroupService.html#changeGroup(org.cyclos.model.users.groups.ChangeGroupDTO)
@@ -23,7 +20,6 @@ class UserGroupService extends Service {
     }
     
     /**
-     * Gets the data needed to change the group of an user.
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.users.groups.ChangeGroupData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserGroupService.html#getChangeGroupData(org.cyclos.model.users.users.UserLocatorVO)

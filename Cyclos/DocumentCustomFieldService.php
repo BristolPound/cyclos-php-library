@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for document custom fields
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentCustomFieldService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class DocumentCustomFieldService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentCustomFieldService.html#getData(java.lang.Long)
@@ -22,7 +20,6 @@ class DocumentCustomFieldService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentCustomFieldService.html#getDataForNew(DP)
@@ -32,7 +29,6 @@ class DocumentCustomFieldService extends Service {
     }
     
     /**
-     * Lists all fields for the given document
      * @param documentId Java type: java.lang.Long
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentCustomFieldService.html#list(java.lang.Long)
@@ -42,8 +38,6 @@ class DocumentCustomFieldService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentCustomFieldService.html#load(java.lang.Long)
@@ -53,7 +47,6 @@ class DocumentCustomFieldService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentCustomFieldService.html#remove(java.lang.Long)
      */
@@ -62,7 +55,6 @@ class DocumentCustomFieldService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentCustomFieldService.html#removeAll(java.util.Collection)
      */
@@ -71,7 +63,6 @@ class DocumentCustomFieldService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentCustomFieldService.html#save(DTO)
@@ -81,7 +72,6 @@ class DocumentCustomFieldService extends Service {
     }
     
     /**
-     * Saves a custom field order.
      * @param customFieldIds Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentCustomFieldService.html#saveOrder(java.util.List)
      */

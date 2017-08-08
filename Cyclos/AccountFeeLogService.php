@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for account fee log
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class AccountFeeLogService extends Service {
     }
     
     /**
-     * Returns data about an account fee execution
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.accountfees.AccountFeeLogData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#getData(java.lang.Long)
@@ -22,7 +20,6 @@ class AccountFeeLogService extends Service {
     }
     
     /**
-     * Returns data to search account fee logs of the given account fee
      * @param accountFeeId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.accountfees.AccountFeeLogsSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#getSearchData(java.lang.Long)
@@ -32,8 +29,6 @@ class AccountFeeLogService extends Service {
     }
     
     /**
-     * Returns the account enabled and visible account fees, together with
-     * the previous and next execution data
 
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#listFeeExecutions()
@@ -43,7 +38,6 @@ class AccountFeeLogService extends Service {
     }
     
     /**
-     * Starts recharging a fee which has finished and some failed users
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#rechargeFailed(java.lang.Long)
      */
@@ -52,8 +46,6 @@ class AccountFeeLogService extends Service {
     }
     
     /**
-     * Starts charging a manual fee, returning the resulting account fee log
-     * id
      * @param accountFeeId Java type: java.lang.Long
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#runNow(java.lang.Long)
@@ -63,7 +55,6 @@ class AccountFeeLogService extends Service {
     }
     
     /**
-     * Searches for account fee logs according to the given criteria
      * @param query Java type: org.cyclos.model.banking.accountfees.AccountFeeLogQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountFeeLogService.html#search(org.cyclos.model.banking.accountfees.AccountFeeLogQuery)

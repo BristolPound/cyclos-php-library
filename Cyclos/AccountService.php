@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for accounts
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,24 @@ class AccountService extends Service {
     }
     
     /**
-     * Gets the details for viewing an account history
+
+     * @return Java type: org.cyclos.model.banking.accounts.AccountBalanceLimitsOverviewData
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getAccountBalanceLimitsOverviewData()
+     */
+    public function getAccountBalanceLimitsOverviewData() {
+        return $this->run('getAccountBalanceLimitsOverviewData', array());
+    }
+    
+    /**
+
+     * @return Java type: org.cyclos.model.banking.accounts.AccountHistoriesOverviewData
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getAccountHistoriesOverviewData()
+     */
+    public function getAccountHistoriesOverviewData() {
+        return $this->run('getAccountHistoriesOverviewData', array());
+    }
+    
+    /**
      * @param account Java type: java.lang.Long     * @param rateVisibility Java type: org.cyclos.model.banking.rates.RateVisibility
      * @return Java type: org.cyclos.model.banking.accounts.AccountHistoryData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getAccountHistoryData(java.lang.Long,%20org.cyclos.model.banking.rates.RateVisibility)
@@ -22,7 +38,6 @@ class AccountService extends Service {
     }
     
     /**
-     * Returns historic status for the account
      * @param params Java type: org.cyclos.model.banking.accounts.AccountHistoryQuery
      * @return Java type: org.cyclos.model.banking.accounts.AccountHistoryStatusVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getAccountHistoryStatus(org.cyclos.model.banking.accounts.AccountHistoryQuery)
@@ -32,18 +47,6 @@ class AccountService extends Service {
     }
     
     /**
-     * Get an account limit data with all necessary to display the related
-     * page
-     * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
-     * @return Java type: org.cyclos.model.banking.accounts.UserAccountsLimitData
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getAccountLimitData(org.cyclos.model.users.users.UserLocatorVO)
-     */
-    public function getAccountLimitData($locator) {
-        return $this->run('getAccountLimitData', array($locator));
-    }
-    
-    /**
-     * Gets the status for the given account
      * @param accountId Java type: java.lang.Long     * @param dateTime Java type: org.cyclos.model.utils.DateTime     * @param rateVisibility Java type: org.cyclos.model.banking.rates.RateVisibility
      * @return Java type: org.cyclos.model.banking.accounts.AccountStatusVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getAccountStatus(java.lang.Long,%20org.cyclos.model.utils.DateTime,%20org.cyclos.model.banking.rates.RateVisibility)
@@ -53,8 +56,6 @@ class AccountService extends Service {
     }
     
     /**
-     * Lists the accounts summary for the given account owner, with balances
-     * relative to the given date
      * @param owner Java type: org.cyclos.model.banking.accounts.AccountOwner     * @param dateTime Java type: org.cyclos.model.utils.DateTime
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getAccountsSummary(org.cyclos.model.banking.accounts.AccountOwner,%20org.cyclos.model.utils.DateTime)
@@ -64,7 +65,24 @@ class AccountService extends Service {
     }
     
     /**
-     * Returns data to search for users with balances
+     * @param accountId Java type: java.lang.Long
+     * @return Java type: org.cyclos.model.banking.accounts.UserAccountLimitData
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getUserAccountLimitData(java.lang.Long)
+     */
+    public function getUserAccountLimitData($accountId) {
+        return $this->run('getUserAccountLimitData', array($accountId));
+    }
+    
+    /**
+     * @param userLocator Java type: org.cyclos.model.users.users.UserLocatorVO
+     * @return Java type: java.util.List
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getUserAccountsLimits(org.cyclos.model.users.users.UserLocatorVO)
+     */
+    public function getUserAccountsLimits($userLocator) {
+        return $this->run('getUserAccountsLimits', array($userLocator));
+    }
+    
+    /**
 
      * @return Java type: org.cyclos.model.banking.accounts.UserWithBalanceSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#getUserWithBalanceSearchData()
@@ -74,8 +92,6 @@ class AccountService extends Service {
     }
     
     /**
-     * Returns true if the logged user has at least one account. The logged
-     * user invoking this method should be a member
 
      * @return Java type: boolean
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#hasAccessibleAccounts()
@@ -85,7 +101,15 @@ class AccountService extends Service {
     }
     
     /**
-     * Loads an account by id
+     * @param fromAccountTypeId Java type: java.lang.Long     * @param toAccountTypeId Java type: java.lang.Long
+     * @return Java type: java.util.List
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#listTransferFiltersForAccountHistoriesOverview(java.lang.Long,%20java.lang.Long)
+     */
+    public function listTransferFiltersForAccountHistoriesOverview($fromAccountTypeId, $toAccountTypeId) {
+        return $this->run('listTransferFiltersForAccountHistoriesOverview', array($fromAccountTypeId, $toAccountTypeId));
+    }
+    
+    /**
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.accounts.AccountVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#load(java.lang.Long)
@@ -95,8 +119,6 @@ class AccountService extends Service {
     }
     
     /**
-     * Genertes a PDF with the account history entries for the given query
-     * parameters.
      * @param params Java type: org.cyclos.model.banking.accounts.AccountHistoryQuery
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#printAccountHistory(org.cyclos.model.banking.accounts.AccountHistoryQuery)
@@ -106,7 +128,24 @@ class AccountService extends Service {
     }
     
     /**
-     * Searches the account history entries for the given query parameters.
+     * @param params Java type: org.cyclos.model.banking.accounts.AccountBalanceLimitsOverviewQuery
+     * @return Java type: org.cyclos.utils.Page
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#searchAccountBalanceLimitsOverview(org.cyclos.model.banking.accounts.AccountBalanceLimitsOverviewQuery)
+     */
+    public function searchAccountBalanceLimitsOverview($params) {
+        return $this->run('searchAccountBalanceLimitsOverview', array($params));
+    }
+    
+    /**
+     * @param params Java type: org.cyclos.model.banking.accounts.AccountHistoriesOverviewQuery
+     * @return Java type: org.cyclos.utils.Page
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#searchAccountHistoriesOverview(org.cyclos.model.banking.accounts.AccountHistoriesOverviewQuery)
+     */
+    public function searchAccountHistoriesOverview($params) {
+        return $this->run('searchAccountHistoriesOverview', array($params));
+    }
+    
+    /**
      * @param params Java type: org.cyclos.model.banking.accounts.AccountHistoryQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#searchAccountHistory(org.cyclos.model.banking.accounts.AccountHistoryQuery)
@@ -116,8 +155,6 @@ class AccountService extends Service {
     }
     
     /**
-     * Searches for users together with their respective account balances,
-     * returning not only the users, but also an overview
      * @param params Java type: org.cyclos.model.banking.accounts.UserWithBalanceQuery
      * @return Java type: org.cyclos.model.banking.accounts.UsersWithBalancesResult
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#searchUsersWithBalances(org.cyclos.model.banking.accounts.UserWithBalanceQuery)
@@ -127,7 +164,6 @@ class AccountService extends Service {
     }
     
     /**
-     * Change limits of an account
      * @param data Java type: org.cyclos.model.banking.accounts.AccountLimitDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/AccountService.html#setBalanceLimit(org.cyclos.model.banking.accounts.AccountLimitDTO)
      */

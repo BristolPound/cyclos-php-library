@@ -1,8 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service which allows access to transfers and scheduled payments. Not
- * to confuse with PaymentService, which is used to perform the payments.
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -13,7 +11,6 @@ class TransferService extends Service {
     }
     
     /**
-     * Returns details data for a transfer
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.transfers.TransferData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferService.html#getData(java.lang.Long)
@@ -23,8 +20,6 @@ class TransferService extends Service {
     }
     
     /**
-     * Returns a transfer by id, or throws EntityNotFoundException if not
-     * found
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.transfers.TransferVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferService.html#load(java.lang.Long)
@@ -34,8 +29,6 @@ class TransferService extends Service {
     }
     
     /**
-     * Returns a transfer by transaction number, or throws
-     * EntityNotFoundException if not found
      * @param transactionNumber Java type: java.lang.String
      * @return Java type: org.cyclos.model.banking.transfers.TransferVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferService.html#loadByTransactionNumber(java.lang.String)
@@ -45,7 +38,6 @@ class TransferService extends Service {
     }
     
     /**
-     * Generates a PDF file for a transfer details
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferService.html#printTransfer(java.lang.Long)

@@ -11,7 +11,6 @@ class MailingListService extends Service {
     }
     
     /**
-     * Returns data for searching Mailing lists.
 
      * @return Java type: org.cyclos.model.messaging.mailinglists.MailingListSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MailingListService.html#getSearchData()
@@ -21,7 +20,6 @@ class MailingListService extends Service {
     }
     
     /**
-     * Returns data for sending a mailing list with the specified type.
      * @param type Java type: org.cyclos.model.messaging.mailinglists.MailingListType
      * @return Java type: org.cyclos.model.messaging.mailinglists.SendMailingListData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MailingListService.html#getSendData(org.cyclos.model.messaging.mailinglists.MailingListType)
@@ -31,7 +29,6 @@ class MailingListService extends Service {
     }
     
     /**
-     * Loads a mailing list by id
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.messaging.mailinglists.MailingListDetailedVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MailingListService.html#load(java.lang.Long)
@@ -41,7 +38,6 @@ class MailingListService extends Service {
     }
     
     /**
-     * Searches for Mailing list according to the given criteria.
      * @param query Java type: org.cyclos.model.messaging.mailinglists.MailingListQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MailingListService.html#search(org.cyclos.model.messaging.mailinglists.MailingListQuery)
@@ -51,8 +47,6 @@ class MailingListService extends Service {
     }
     
     /**
-     * Sends a message to the specified recipients (groups/users) and return
-     * the total of users that will receive the message.
      * @param object Java type: org.cyclos.model.messaging.mailinglists.SendMailingListDTO
      * @return Java type: int
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MailingListService.html#send(org.cyclos.model.messaging.mailinglists.SendMailingListDTO)

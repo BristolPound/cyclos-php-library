@@ -26,7 +26,7 @@ class Service {
 		}
 		$result = \json_decode($json);
 		if ($code == 200) {
-			return $result->result;
+			return (property_exists($result, "result")) ? $result->result : NULL;
 		} else {
 			$error = $result;
 			if ($error == NULL) {

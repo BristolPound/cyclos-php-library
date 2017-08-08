@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service used to retrieve flash notifications
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/FlashNotificationService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class FlashNotificationService extends Service {
     }
     
     /**
-     * Creates a new flash notification
      * @param notification Java type: org.cyclos.model.messaging.notifications.FlashNotificationDTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/FlashNotificationService.html#create(org.cyclos.model.messaging.notifications.FlashNotificationDTO)
@@ -22,8 +20,6 @@ class FlashNotificationService extends Service {
     }
     
     /**
-     * Returns the flash notification with the given identifier, removing it
-     * if found. If not found, returns null
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.messaging.notifications.FlashNotificationDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/FlashNotificationService.html#get(java.lang.Long)

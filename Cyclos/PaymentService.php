@@ -1,11 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface to perform payments and for searching and retrieve
- * information about a payment. A payment is a transaction, and
- * performing a payment normally starts by using
- * TransactionService#getPaymentData. Then, at a certain point, the user
- * can #preview and eventually #perform the payment.
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -16,7 +11,6 @@ class PaymentService extends Service {
     }
     
     /**
-     * Returns data about a payment
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.transactions.PaymentData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#getData(java.lang.Long)
@@ -26,8 +20,6 @@ class PaymentService extends Service {
     }
     
     /**
-     * Performs a payment, according to the given parameters, returning the
-     * resulting payment.
      * @param parameters Java type: org.cyclos.model.banking.transactions.PerformPaymentDTO
      * @return Java type: org.cyclos.model.banking.transactions.PaymentVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#perform(org.cyclos.model.banking.transactions.PerformPaymentDTO)
@@ -37,7 +29,6 @@ class PaymentService extends Service {
     }
     
     /**
-     * Previews a payment
      * @param parameters Java type: org.cyclos.model.banking.transactions.PerformPaymentDTO
      * @return Java type: org.cyclos.model.banking.transactions.PaymentPreviewVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#preview(org.cyclos.model.banking.transactions.PerformPaymentDTO)
@@ -47,7 +38,15 @@ class PaymentService extends Service {
     }
     
     /**
-     * Generates a PDF file with the details for a payment.
+     * @param parameters Java type: org.cyclos.model.banking.transactions.PerformPaymentDTO
+     * @return Java type: org.cyclos.model.banking.transactions.PaymentPreviewVO
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#previewReceive(org.cyclos.model.banking.transactions.PerformPaymentDTO)
+     */
+    public function previewReceive($parameters) {
+        return $this->run('previewReceive', array($parameters));
+    }
+    
+    /**
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#print(java.lang.Long)
@@ -57,7 +56,15 @@ class PaymentService extends Service {
     }
     
     /**
-     * Searches for payments, according to the given query
+     * @param parameters Java type: org.cyclos.model.banking.transactions.PerformPaymentDTO
+     * @return Java type: org.cyclos.model.banking.transactions.PaymentVO
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#receive(org.cyclos.model.banking.transactions.PerformPaymentDTO)
+     */
+    public function receive($parameters) {
+        return $this->run('receive', array($parameters));
+    }
+    
+    /**
      * @param query Java type: org.cyclos.model.banking.transactions.PaymentQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/PaymentService.html#search(org.cyclos.model.banking.transactions.PaymentQuery)

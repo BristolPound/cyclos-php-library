@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service used to access the error log
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/ErrorLogService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class ErrorLogService extends Service {
     }
     
     /**
-     * Searches the error log history
      * @param query Java type: org.cyclos.model.messaging.errorlogs.ErrorLogQuery
      * @return Java type: org.cyclos.model.messaging.errorlogs.ErrorLogSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/ErrorLogService.html#getSearchData(org.cyclos.model.messaging.errorlogs.ErrorLogQuery)
@@ -22,7 +20,6 @@ class ErrorLogService extends Service {
     }
     
     /**
-     * Loads an entry by id
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.messaging.errorlogs.ErrorLogDetailedVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/ErrorLogService.html#load(java.lang.Long)
@@ -32,7 +29,6 @@ class ErrorLogService extends Service {
     }
     
     /**
-     * Removes a single entry
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/ErrorLogService.html#remove(java.lang.Long)
      */
@@ -41,7 +37,6 @@ class ErrorLogService extends Service {
     }
     
     /**
-     * Removes all the given entries
      * @param ids Java type: java.util.Set
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/ErrorLogService.html#removeAll(java.util.Set)
      */
@@ -50,7 +45,6 @@ class ErrorLogService extends Service {
     }
     
     /**
-     * Searches the error log history
      * @param query Java type: org.cyclos.model.messaging.errorlogs.ErrorLogQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/ErrorLogService.html#search(org.cyclos.model.messaging.errorlogs.ErrorLogQuery)

@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for Records
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class RecordService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#getData(java.lang.Long)
@@ -22,7 +20,6 @@ class RecordService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#getDataForNew(DP)
@@ -32,7 +29,6 @@ class RecordService extends Service {
     }
     
     /**
-     * Returns data for searching records
      * @param recordTypeId Java type: java.lang.Long     * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.users.records.RecordSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#getSearchData(java.lang.Long,%20org.cyclos.model.users.users.UserLocatorVO)
@@ -42,8 +38,15 @@ class RecordService extends Service {
     }
     
     /**
-     * Returns data for listing tiled records of a given user. When locator
-     * is null, it is assumed the logged user
+
+     * @return Java type: org.cyclos.model.users.records.RecordSearchData
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#getSharedFieldsSearchData()
+     */
+    public function getSharedFieldsSearchData() {
+        return $this->run('getSharedFieldsSearchData', array());
+    }
+    
+    /**
      * @param recordTypeId Java type: java.lang.Long     * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.users.records.TiledRecordsData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#getTiledRecordsData(java.lang.Long,%20org.cyclos.model.users.users.UserLocatorVO)
@@ -53,8 +56,6 @@ class RecordService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#load(java.lang.Long)
@@ -64,7 +65,6 @@ class RecordService extends Service {
     }
     
     /**
-     * Loads a VO, by id
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.users.records.RecordVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#loadVO(java.lang.Long)
@@ -74,7 +74,6 @@ class RecordService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#remove(java.lang.Long)
      */
@@ -83,7 +82,6 @@ class RecordService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#removeAll(java.util.Collection)
      */
@@ -92,7 +90,6 @@ class RecordService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#save(DTO)
@@ -102,7 +99,6 @@ class RecordService extends Service {
     }
     
     /**
-     * Searches for records
      * @param query Java type: org.cyclos.model.users.records.RecordQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/RecordService.html#search(org.cyclos.model.users.records.RecordQuery)

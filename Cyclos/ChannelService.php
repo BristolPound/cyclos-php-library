@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for channels
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/ChannelService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class ChannelService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/ChannelService.html#getData(java.lang.Long)
@@ -22,7 +20,6 @@ class ChannelService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/ChannelService.html#getDataForNew(DP)
@@ -32,7 +29,6 @@ class ChannelService extends Service {
     }
     
     /**
-     * List all available channels
 
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/ChannelService.html#list()
@@ -42,8 +38,6 @@ class ChannelService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/ChannelService.html#load(java.lang.Long)
@@ -53,18 +47,6 @@ class ChannelService extends Service {
     }
     
     /**
-     * Loads a channel by internal name, throwing EntityNotFoundException if
-     * none is found
-     * @param internalName Java type: java.lang.String
-     * @return Java type: org.cyclos.model.access.channels.ChannelVO
-     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/ChannelService.html#loadByInternalName(java.lang.String)
-     */
-    public function loadByInternalName($internalName) {
-        return $this->run('loadByInternalName', array($internalName));
-    }
-    
-    /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/ChannelService.html#remove(java.lang.Long)
      */
@@ -73,7 +55,6 @@ class ChannelService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/ChannelService.html#removeAll(java.util.Collection)
      */
@@ -82,7 +63,6 @@ class ChannelService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/ChannelService.html#save(DTO)

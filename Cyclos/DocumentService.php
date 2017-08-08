@@ -11,7 +11,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#getData(java.lang.Long)
@@ -21,7 +20,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#getDataForNew(DP)
@@ -31,7 +29,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * User to get the view only object of the document
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.contentmanagement.documents.DocumentVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#getDocument(java.lang.Long)
@@ -41,7 +38,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Return the file vo for a given document id
      * @param documentId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.contentmanagement.documents.DocumentFileVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#getDocumentFile(java.lang.Long)
@@ -51,7 +47,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Returns data used to search documents
      * @param query Java type: org.cyclos.model.contentmanagement.documents.DocumentQuery
      * @return Java type: org.cyclos.model.contentmanagement.documents.DocumentSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#getDocumentSearchData(org.cyclos.model.contentmanagement.documents.DocumentQuery)
@@ -61,8 +56,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Returns data used to fill a dynamic document based on the given user
-     * locator data
      * @param id Java type: java.lang.Long     * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.contentmanagement.documents.ProcessDynamicDocumentData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#getProcessDynamicDocumentData(java.lang.Long,%20org.cyclos.model.users.users.UserLocatorVO)
@@ -72,7 +65,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * List all Documents filtered by user
 
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#listMyDocuments()
@@ -82,8 +74,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#load(java.lang.Long)
@@ -93,8 +83,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Processes the given document using the given user and custom field
-     * values
      * @param params Java type: org.cyclos.model.contentmanagement.documents.ProcessDynamicDocumentDTO
      * @return Java type: java.lang.String
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#processDynamicDocument(org.cyclos.model.contentmanagement.documents.ProcessDynamicDocumentDTO)
@@ -104,8 +92,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Reads the contents of the document with the given id, with the
-     * specified size
      * @param documentId Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#readContent(java.lang.Long)
@@ -115,7 +101,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#remove(java.lang.Long)
      */
@@ -124,7 +109,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#removeAll(java.util.Collection)
      */
@@ -133,7 +117,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#save(DTO)
@@ -143,7 +126,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * Saves the given document, returning the generated identifier
      * @param documentId Java type: java.lang.Long     * @param contentType Java type: java.lang.String     * @param fileName Java type: java.lang.String     * @param contents Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#saveFile(java.lang.Long,%20java.lang.String,%20java.lang.String,%20org.cyclos.server.utils.SerializableInputStream)
      */
@@ -152,7 +134,6 @@ class DocumentService extends Service {
     }
     
     /**
-     * List all documents filtered by category
      * @param query Java type: org.cyclos.model.contentmanagement.documents.DocumentQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/DocumentService.html#search(org.cyclos.model.contentmanagement.documents.DocumentQuery)

@@ -1,8 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for user images. The parameter for saving images is
- * the user identifier.
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -13,7 +11,6 @@ class UserImageService extends Service {
     }
     
     /**
-     * Returns a list of images for the given owner id
      * @param ownerId Java type: java.lang.Long
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html#list(java.lang.Long)
@@ -23,7 +20,6 @@ class UserImageService extends Service {
     }
     
     /**
-     * Loads a VO by id
      * @param id Java type: java.lang.Long
      * @return Java type: VO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html#load(java.lang.Long)
@@ -33,7 +29,6 @@ class UserImageService extends Service {
     }
     
     /**
-     * Loads a VO by url id
      * @param key Java type: java.lang.String
      * @return Java type: VO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html#loadByKey(java.lang.String)
@@ -43,8 +38,6 @@ class UserImageService extends Service {
     }
     
     /**
-     * Reads the contents for the image with the given id, with the specified
-     * size
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html#readContent(java.lang.Long)
@@ -54,8 +47,6 @@ class UserImageService extends Service {
     }
     
     /**
-     * Reads the contents for the image with the given key, with the
-     * specified size
      * @param key Java type: java.lang.String
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html#readContentByKey(java.lang.String)
@@ -65,7 +56,6 @@ class UserImageService extends Service {
     }
     
     /**
-     * Removes the given image
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html#remove(java.lang.Long)
      */
@@ -74,8 +64,6 @@ class UserImageService extends Service {
     }
     
     /**
-     * Saves the given image for the given parameter (which depends on each
-     * image type), returning the descriptor
      * @param param Java type: NP     * @param name Java type: java.lang.String     * @param contents Java type: org.cyclos.server.utils.SerializableInputStream     * @param contentType Java type: java.lang.String
      * @return Java type: VO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html#save(NP,%20java.lang.String,%20org.cyclos.server.utils.SerializableInputStream,%20java.lang.String)
@@ -85,7 +73,6 @@ class UserImageService extends Service {
     }
     
     /**
-     * Saves the name of the given image
      * @param id Java type: java.lang.Long     * @param name Java type: java.lang.String
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html#saveName(java.lang.Long,%20java.lang.String)
      */
@@ -94,7 +81,6 @@ class UserImageService extends Service {
     }
     
     /**
-     * Saves the images order
      * @param ownerId Java type: java.lang.Long     * @param imageIds Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/UserImageService.html#saveOrder(java.lang.Long,%20java.util.List)
      */

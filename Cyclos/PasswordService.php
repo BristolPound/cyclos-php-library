@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service for managing an user's passwords
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Activates the generated password a new password for the current user
      * @param passwordTypeId Java type: java.lang.Long
      * @return Java type: java.lang.String
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#activate(java.lang.Long)
@@ -22,8 +20,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Allows the given user to activate the given generated and pending
-     * password
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param passwordTypeId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#allowActivation(org.cyclos.model.users.users.UserLocatorVO,%20java.lang.Long)
      */
@@ -32,7 +28,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Manually changes a password
      * @param dto Java type: org.cyclos.model.access.passwords.ChangePasswordDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#change(org.cyclos.model.access.passwords.ChangePasswordDTO)
      */
@@ -41,7 +36,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Changes a forgotten password, or resets it, in case of manual password
      * @param dto Java type: org.cyclos.model.access.passwords.ChangeForgottenPasswordDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#changeForgottenPassword(org.cyclos.model.access.passwords.ChangeForgottenPasswordDTO)
      */
@@ -50,8 +44,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Disables a password. A disabled password cannot be used again, unless
-     * re-enabled
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param passwordTypeId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#disable(org.cyclos.model.users.users.UserLocatorVO,%20java.lang.Long)
      */
@@ -60,8 +52,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Enables a disabled password. A disabled password cannot be used again,
-     * unless re-enabled
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param passwordTypeId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#enable(org.cyclos.model.users.users.UserLocatorVO,%20java.lang.Long)
      */
@@ -70,9 +60,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Initiates the forgot password operation, allowing the user to set
-     * another password based on an e-mail token and security question
-     * verification
      * @param params Java type: org.cyclos.model.access.passwords.ForgotPasswordRequestDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#forgotPasswordRequest(org.cyclos.model.access.passwords.ForgotPasswordRequestDTO)
      */
@@ -81,7 +68,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Allows to change a generated password by generating a new one
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param passwordTypeId Java type: java.lang.Long
      * @return Java type: java.lang.String
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#generateNew(org.cyclos.model.users.users.UserLocatorVO,%20java.lang.Long)
@@ -91,7 +77,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Returns data for a forgot password change request
      * @param validationKey Java type: java.lang.String
      * @return Java type: org.cyclos.model.access.passwords.ChangeForgottenPasswordData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#getChangeForgottenPasswordData(java.lang.String)
@@ -101,7 +86,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Returns data for change the main login password
 
      * @return Java type: org.cyclos.model.access.passwords.ChangePasswordData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#getChangePasswordData()
@@ -111,7 +95,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Returns data for user passwords
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.access.passwords.UserPasswordsData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#getData(org.cyclos.model.users.users.UserLocatorVO)
@@ -121,7 +104,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Resets the given generated password and allow it to be activated again
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param passwordTypeId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#reset(org.cyclos.model.users.users.UserLocatorVO,%20java.lang.Long)
      */
@@ -130,9 +112,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Generates a new value of a manual password and send it to the user
-     * (for example, via e-mail). The new password is initially expired, so
-     * the user will be forced to change it.
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param passwordTypeId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#resetAndSend(org.cyclos.model.users.users.UserLocatorVO,%20java.lang.Long)
      */
@@ -141,8 +120,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Resets the security question, forcing the user to set a new one in the
-     * next login
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#resetSecurityQuestion(org.cyclos.model.users.users.UserLocatorVO)
      */
@@ -151,7 +128,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Sets the security question's answer for the logged user
      * @param params Java type: org.cyclos.model.access.passwords.SetSecurityQuestionDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#setSecurityQuestion(org.cyclos.model.access.passwords.SetSecurityQuestionDTO)
      */
@@ -160,7 +136,6 @@ class PasswordService extends Service {
     }
     
     /**
-     * Unblocks the given user password
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO     * @param passwordTypeId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/access/PasswordService.html#unblock(org.cyclos.model.users.users.UserLocatorVO,%20java.lang.Long)
      */

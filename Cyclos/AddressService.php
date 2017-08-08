@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for address handling
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/AddressService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,8 +11,6 @@ class AddressService extends Service {
     }
     
     /**
-     * Returns all the user addresses. If the logged user manages the given
-     * user, the hidden addresses will be also returned.
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.users.addresses.AddressListData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/AddressService.html#getAddressListData(org.cyclos.model.users.users.UserLocatorVO)
@@ -23,7 +20,6 @@ class AddressService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/AddressService.html#getData(java.lang.Long)
@@ -33,7 +29,6 @@ class AddressService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/AddressService.html#getDataForNew(DP)
@@ -43,8 +38,6 @@ class AddressService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/AddressService.html#load(java.lang.Long)
@@ -54,7 +47,6 @@ class AddressService extends Service {
     }
     
     /**
-     * Marks the given address as default for it's owner
      * @param addressId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/AddressService.html#markAsDefault(java.lang.Long)
      */
@@ -63,7 +55,6 @@ class AddressService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/AddressService.html#remove(java.lang.Long)
      */
@@ -72,7 +63,6 @@ class AddressService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/AddressService.html#removeAll(java.util.Collection)
      */
@@ -81,7 +71,6 @@ class AddressService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/AddressService.html#save(DTO)

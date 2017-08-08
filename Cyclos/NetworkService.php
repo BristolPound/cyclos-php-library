@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service used to manage networks
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Creates a new network with initial data
      * @param network Java type: org.cyclos.model.system.networks.NetworkDTO     * @param data Java type: org.cyclos.model.system.networks.NetworkInitialDataDTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#createWithData(org.cyclos.model.system.networks.NetworkDTO,%20org.cyclos.model.system.networks.NetworkInitialDataDTO)
@@ -22,7 +20,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#getData(java.lang.Long)
@@ -32,7 +29,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#getDataForNew(DP)
@@ -42,7 +38,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Returns data for creating a new network with initial data
 
      * @return Java type: org.cyclos.model.system.networks.NetworkWithInitialDataData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#getDataForNewWithData()
@@ -52,10 +47,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * It returns the full (root URL + root path) network's URL if not empty.
-     * Otherwise it returns the default configuration's root URL plus the
-     * network's root path (if not empty). @return the resolved network's
-     * full url always ending with a slash ('/')
      * @param networkId Java type: java.lang.Long
      * @return Java type: java.lang.String
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#getFullURL(java.lang.Long)
@@ -65,8 +56,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Returns an initial data pre-populated with fields according to the
-     * given initial selections
      * @param basicData Java type: org.cyclos.model.system.networks.BasicNetworkInitialDataDTO
      * @return Java type: org.cyclos.model.system.networks.NetworkInitialDataDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#getInitialData(org.cyclos.model.system.networks.BasicNetworkInitialDataDTO)
@@ -76,7 +65,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Returns data for searching networks
 
      * @return Java type: org.cyclos.model.system.networks.NetworkSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#getSearchData()
@@ -86,8 +74,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#load(java.lang.Long)
@@ -97,7 +83,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#remove(java.lang.Long)
      */
@@ -106,7 +91,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#removeAll(java.util.Collection)
      */
@@ -115,7 +99,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#save(DTO)
@@ -125,7 +108,6 @@ class NetworkService extends Service {
     }
     
     /**
-     * Searches for networks according to the given criteria
      * @param query Java type: org.cyclos.model.system.networks.NetworkQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/NetworkService.html#search(org.cyclos.model.system.networks.NetworkQuery)

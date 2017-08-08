@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service for viewing / handling the Cyclos license
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/LicenseService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class LicenseService extends Service {
     }
     
     /**
-     * Returns very basic license details
 
      * @return Java type: org.cyclos.model.system.licensing.BasicLicenseVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/LicenseService.html#getBasicLicense()
@@ -22,7 +20,6 @@ class LicenseService extends Service {
     }
     
     /**
-     * Returns the current license details
 
      * @return Java type: org.cyclos.model.system.licensing.LicenseVO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/LicenseService.html#getLicense()
@@ -32,7 +29,6 @@ class LicenseService extends Service {
     }
     
     /**
-     * Updates the license offline
      * @param in Java type: org.cyclos.server.utils.SerializableInputStream
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/LicenseService.html#offlineUpdate(org.cyclos.server.utils.SerializableInputStream)
      */
@@ -41,7 +37,6 @@ class LicenseService extends Service {
     }
     
     /**
-     * Updates the license online
 
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/LicenseService.html#onlineUpdate()
      */

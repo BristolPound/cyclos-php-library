@@ -1,9 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for transaction authorizations.<br> It allow
- * authorize, deny etc a transaction and search for transactions to
- * authorize and already authorized.
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionAuthorizationService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -14,7 +11,6 @@ class TransactionAuthorizationService extends Service {
     }
     
     /**
-     * Authorizes a payment pending authorization
      * @param transferAuthorizationDto Java type: org.cyclos.model.banking.authorizations.TransactionAuthorizationDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionAuthorizationService.html#authorize(org.cyclos.model.banking.authorizations.TransactionAuthorizationDTO)
      */
@@ -23,7 +19,6 @@ class TransactionAuthorizationService extends Service {
     }
     
     /**
-     * Cancels a payment pending authorization
      * @param transferAuthorizationDto Java type: org.cyclos.model.banking.authorizations.TransactionAuthorizationDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionAuthorizationService.html#cancel(org.cyclos.model.banking.authorizations.TransactionAuthorizationDTO)
      */
@@ -32,7 +27,6 @@ class TransactionAuthorizationService extends Service {
     }
     
     /**
-     * Denies a payment pending authorization
      * @param transferAuthorizationDto Java type: org.cyclos.model.banking.authorizations.TransactionAuthorizationDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionAuthorizationService.html#deny(org.cyclos.model.banking.authorizations.TransactionAuthorizationDTO)
      */
@@ -41,7 +35,6 @@ class TransactionAuthorizationService extends Service {
     }
     
     /**
-     * Returns data for searching transfer authorizations
 
      * @return Java type: org.cyclos.model.banking.authorizations.TransactionAuthorizationsSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionAuthorizationService.html#getAuthorizationSearchData()
@@ -51,7 +44,6 @@ class TransactionAuthorizationService extends Service {
     }
     
     /**
-     * Returns data for searching authorizable/authorized transactions.
      * @param owner Java type: org.cyclos.model.banking.accounts.AccountOwner
      * @return Java type: org.cyclos.model.banking.transactions.TransactionSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionAuthorizationService.html#getTransactionSearchData(org.cyclos.model.banking.accounts.AccountOwner)
@@ -61,8 +53,6 @@ class TransactionAuthorizationService extends Service {
     }
     
     /**
-     * Searches for authorized transactions of any status, according to the
-     * given query
      * @param query Java type: org.cyclos.model.banking.transactions.AuthorizedTransactionQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionAuthorizationService.html#searchAuthorizedTransactions(org.cyclos.model.banking.transactions.AuthorizedTransactionQuery)
@@ -72,7 +62,6 @@ class TransactionAuthorizationService extends Service {
     }
     
     /**
-     * Searches transactions which the user has to authorize
      * @param query Java type: org.cyclos.model.banking.authorizations.TransactionsToAuthorizeQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionAuthorizationService.html#searchTransactionsToAuthorize(org.cyclos.model.banking.authorizations.TransactionsToAuthorizeQuery)

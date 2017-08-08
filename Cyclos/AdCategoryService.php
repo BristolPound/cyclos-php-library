@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for ad categories
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#getData(java.lang.Long)
@@ -22,7 +20,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#getDataForNew(DP)
@@ -32,8 +29,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#load(java.lang.Long)
@@ -43,7 +38,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#remove(java.lang.Long)
      */
@@ -52,7 +46,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#removeAll(java.util.Collection)
      */
@@ -61,7 +54,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#save(DTO)
@@ -71,7 +63,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Saves several categories
      * @param categories Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#saveCategories(java.util.List)
      */
@@ -80,7 +71,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Updates the order field according to the sequence on AdCategoryVOs set
      * @param categoryIds Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#saveOrder(java.util.List)
      */
@@ -89,7 +79,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Searches categories according to parameters
      * @param params Java type: org.cyclos.model.marketplace.categories.AdCategoryQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#search(org.cyclos.model.marketplace.categories.AdCategoryQuery)
@@ -99,8 +88,6 @@ class AdCategoryService extends Service {
     }
     
     /**
-     * Updates the order field of categories child of the category with the
-     * given id (or root if id is null) alphabetically (by name)
      * @param parentId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdCategoryService.html#sortAlphabetically(java.lang.Long)
      */

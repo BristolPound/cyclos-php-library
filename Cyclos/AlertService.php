@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for alerts
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/AlertService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class AlertService extends Service {
     }
     
     /**
-     * Searches for system alerts history and it's data
      * @param alertQuery Java type: org.cyclos.model.messaging.alerts.SystemAlertQuery
      * @return Java type: org.cyclos.model.messaging.alerts.SystemAlertSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/AlertService.html#getSystemSearchData(org.cyclos.model.messaging.alerts.SystemAlertQuery)
@@ -22,7 +20,6 @@ class AlertService extends Service {
     }
     
     /**
-     * Removes the given alert
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/AlertService.html#remove(java.lang.Long)
      */
@@ -31,7 +28,6 @@ class AlertService extends Service {
     }
     
     /**
-     * Removes all the given alerts
      * @param ids Java type: java.util.Set
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/AlertService.html#removeAll(java.util.Set)
      */
@@ -40,7 +36,6 @@ class AlertService extends Service {
     }
     
     /**
-     * Searches for system alerts history
      * @param alertQuery Java type: org.cyclos.model.messaging.alerts.SystemAlertQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/AlertService.html#searchSystem(org.cyclos.model.messaging.alerts.SystemAlertQuery)
@@ -50,7 +45,6 @@ class AlertService extends Service {
     }
     
     /**
-     * Searches for user alerts history
      * @param alertQuery Java type: org.cyclos.model.messaging.alerts.UserAlertQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/AlertService.html#searchUser(org.cyclos.model.messaging.alerts.UserAlertQuery)

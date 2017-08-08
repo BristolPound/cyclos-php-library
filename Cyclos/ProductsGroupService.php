@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service used to view / manage products assigned to a group / group set
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class ProductsGroupService extends Service {
     }
     
     /**
-     * Assigns the given product to the product owner.
      * @param productId Java type: java.lang.Long     * @param ownerId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.users.products.ActiveProductsData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html#assign(java.lang.Long,%20java.lang.Long)
@@ -22,8 +20,6 @@ class ProductsGroupService extends Service {
     }
     
     /**
-     * Returns the ActiveProductsData, containing all the actual product data
-     * for the user/group with the given id
      * @param ownerId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.users.products.ActiveProductsData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html#getActiveProducts(java.lang.Long)
@@ -33,8 +29,6 @@ class ProductsGroupService extends Service {
     }
     
     /**
-     * Unasigns the given product from the owner. Returns a new
-     * ActiveProductsData. If unsuccessful the result is null. *
      * @param productId Java type: java.lang.Long     * @param ownerId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.users.products.ActiveProductsData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/ProductsGroupService.html#unassign(java.lang.Long,%20java.lang.Long)

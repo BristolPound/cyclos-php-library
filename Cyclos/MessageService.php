@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service used to manage messages between users
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Return unread messages count
 
      * @return Java type: int
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#countNewMessages()
@@ -31,7 +29,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Returns details data for the given message
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.messaging.messages.MessageData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#getData(java.lang.Long)
@@ -41,7 +38,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Returns data used to search messages
 
      * @return Java type: org.cyclos.model.messaging.messages.MessageSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#getSearchData()
@@ -51,9 +47,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Returns data for sending a message. If replyId is given, the new
-     * message will be a reply for that one. If toUserId is given, the
-     * message will be to that specific user.
      * @param replyId Java type: java.lang.Long     * @param toUserId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.messaging.messages.SendMessageData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#getSendData(java.lang.Long,%20java.lang.Long)
@@ -63,7 +56,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Marks all the given message as either read or as unread
      * @param ids Java type: java.util.Set     * @param isRead Java type: boolean
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#markAsRead(java.util.Set,%20boolean)
      */
@@ -72,7 +64,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Moves all the given messages to the trash bin
      * @param ids Java type: java.util.Set
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#moveToTrash(java.util.Set)
      */
@@ -81,7 +72,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Permanently removes all the given messages
      * @param ids Java type: java.util.Set
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#removeAll(java.util.Set)
      */
@@ -90,8 +80,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Restores the given messages, that is, move them from the trash bin to
-     * the original message box (either inbox or sent items)
      * @param ids Java type: java.util.Set
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#restoreAll(java.util.Set)
      */
@@ -100,7 +88,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Searches for messages according to the given criteria
      * @param query Java type: org.cyclos.model.messaging.messages.MessageQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#search(org.cyclos.model.messaging.messages.MessageQuery)
@@ -110,7 +97,6 @@ class MessageService extends Service {
     }
     
     /**
-     * Sends a message
      * @param object Java type: org.cyclos.model.messaging.messages.SendMessageDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/messaging/MessageService.html#send(org.cyclos.model.messaging.messages.SendMessageDTO)
      */

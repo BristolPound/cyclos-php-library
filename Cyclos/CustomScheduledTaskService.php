@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service for managing custom scheduled tasks
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomScheduledTaskService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class CustomScheduledTaskService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomScheduledTaskService.html#getData(java.lang.Long)
@@ -22,7 +20,6 @@ class CustomScheduledTaskService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomScheduledTaskService.html#getDataForNew(DP)
@@ -32,7 +29,6 @@ class CustomScheduledTaskService extends Service {
     }
     
     /**
-     * Lists all available custom operations
 
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomScheduledTaskService.html#list()
@@ -42,8 +38,6 @@ class CustomScheduledTaskService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomScheduledTaskService.html#load(java.lang.Long)
@@ -53,7 +47,6 @@ class CustomScheduledTaskService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomScheduledTaskService.html#remove(java.lang.Long)
      */
@@ -62,7 +55,6 @@ class CustomScheduledTaskService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomScheduledTaskService.html#removeAll(java.util.Collection)
      */
@@ -71,7 +63,6 @@ class CustomScheduledTaskService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomScheduledTaskService.html#save(DTO)
@@ -81,7 +72,6 @@ class CustomScheduledTaskService extends Service {
     }
     
     /**
-     * Searches for a task execution logs
      * @param params Java type: org.cyclos.model.system.scheduledtasks.CustomScheduledTaskLogQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomScheduledTaskService.html#searchLogs(org.cyclos.model.system.scheduledtasks.CustomScheduledTaskLogQuery)

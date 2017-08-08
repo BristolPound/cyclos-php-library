@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface used to handle user phones
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#getData(java.lang.Long)
@@ -22,7 +20,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#getDataForNew(DP)
@@ -32,7 +29,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Returns data containing all phones belonging to the given user
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.users.phones.PhoneListData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#getPhoneListData(org.cyclos.model.users.users.UserLocatorVO)
@@ -42,8 +38,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#load(java.lang.Long)
@@ -53,7 +47,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Enables / disables the given mobile phone to operate via SMS
      * @param id Java type: java.lang.Long     * @param enabled Java type: boolean
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#markAsEnabledForSms(java.lang.Long,%20boolean)
      */
@@ -62,7 +55,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#remove(java.lang.Long)
      */
@@ -71,7 +63,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#removeAll(java.util.Collection)
      */
@@ -80,7 +71,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#save(DTO)
@@ -90,7 +80,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Sends a verification code to a mobile phone via SMS.
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#sendVerificationCode(java.lang.Long)
      */
@@ -99,7 +88,6 @@ class PhoneService extends Service {
     }
     
     /**
-     * Verifies a mobile phone with a code received via SMS.
      * @param id Java type: java.lang.Long     * @param verificationCode Java type: java.lang.String
      * @return Java type: org.cyclos.model.users.phones.CodeVerificationStatus
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/users/PhoneService.html#verify(java.lang.Long,%20java.lang.String)

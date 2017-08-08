@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for web shop settings
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdWebShopSettingService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class AdWebShopSettingService extends Service {
     }
     
     /**
-     * Returns the settings for the given user
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.marketplace.webshopsettings.AdWebShopSettingDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdWebShopSettingService.html#getSetting(org.cyclos.model.users.users.UserLocatorVO)
@@ -22,7 +20,6 @@ class AdWebShopSettingService extends Service {
     }
     
     /**
-     * Saves the settings
      * @param dto Java type: org.cyclos.model.marketplace.webshopsettings.AdWebShopSettingDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdWebShopSettingService.html#save(org.cyclos.model.marketplace.webshopsettings.AdWebShopSettingDTO)
      */

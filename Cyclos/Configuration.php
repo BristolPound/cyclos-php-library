@@ -6,13 +6,15 @@
  */
 class Configuration {
 	private static $rootUrl;
-	private static $stateful;
+	private static $accessType;
 	
-	private static $username;
+	private static $principal;
 	private static $password;
 
 	private static $sessionToken;
 	private static $forwardRemoteAddress;
+	
+	private static $accessClientToken;
 	
 	/**
 	 * Sets the Cyclos root url
@@ -31,18 +33,26 @@ class Configuration {
 	/**
 	 * Configures a stateless access, passing the username and password on each request
 	 */
-	public static function setAuthentication($username, $password) {
-		Configuration::$username = $username;
+	public static function setAuthentication($principal, $password) {
+		Configuration::$principal = $principal;
 		Configuration::$password = $password;
-		Configuration::$stateful = false;
+		Configuration::$accessType = 'LOGIN';
 	}
-	
+
 	/**
 	 * Configures a stateful access, passing the session token on each request
 	 */
 	public static function setSessionToken($sessionToken) {
 		Configuration::$sessionToken = $sessionToken;
-		Configuration::$stateful = true;
+		Configuration::$accessType = 'SESSION';
+	}
+
+	/**
+	 * Configures an access client token, using it on each request
+	 */
+	public static function setAccessClientToken($accessClientToken) {
+		Configuration::$accessClientToken = $accessClientToken;
+		Configuration::$accessType = 'ACCESS_CLIENT';
 	}
 	
 	/**
@@ -75,13 +85,19 @@ class Configuration {
 				CURLOPT_POSTFIELDS => \json_encode($request)
 		);
 		
-		if (Configuration::$stateful) {
-			$opts[CURLOPT_HTTPHEADER][] = 'Session-Token: ' . Configuration::$sessionToken;
-			if (Configuration::$forwardRemoteAddress) {
-				$opts[CURLOPT_HTTPHEADER][] = 'Remote-Address: ' . $_SERVER['REMOTE_ADDR'];
-			}
-		} else {
-			$opts[CURLOPT_USERPWD] = Configuration::$username . ':' . Configuration::$password;
+		switch (Configuration::$accessType) {
+			case 'LOGIN':
+				$opts[CURLOPT_USERPWD] = Configuration::$principal . ':' . Configuration::$password;
+				break;
+			case 'SESSION':
+				$opts[CURLOPT_HTTPHEADER][] = 'Session-Token: ' . Configuration::$sessionToken;
+				if (Configuration::$forwardRemoteAddress) {
+					$opts[CURLOPT_HTTPHEADER][] = 'Remote-Address: ' . $_SERVER['REMOTE_ADDR'];
+				}
+				break;
+			case 'ACCESS_CLIENT':
+				$opts[CURLOPT_HTTPHEADER][] = 'Authorization: Bearer ' . Configuration::$accessClientToken;
+				break;
 		}
 		
 		return $opts;

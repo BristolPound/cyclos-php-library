@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for Imports
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,8 +11,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Attempts to trigger the abort process of the given import. If can
-     * returns true, otherwise returns false.
      * @param importedFileId Java type: java.lang.Long
      * @return Java type: boolean
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#abort(java.lang.Long)
@@ -23,7 +20,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#getData(java.lang.Long)
@@ -33,7 +29,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#getDataForNew(DP)
@@ -43,8 +38,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Returns a double between 0 and 1 indicating the progress of the given
-     * import.
      * @param importedFileId Java type: long
      * @return Java type: java.util.Map
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#getImportProgress(long)
@@ -54,7 +47,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Returns the imported line data
      * @param importedLineId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.system.imports.ImportedLineData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#getImportedLineData(java.lang.Long)
@@ -64,7 +56,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Returns information to perform searches over imports.
      * @param params Java type: org.cyclos.model.system.imports.ImportedFileQuery
      * @return Java type: org.cyclos.model.system.imports.ImportedFileSearchData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#getSearchData(org.cyclos.model.system.imports.ImportedFileQuery)
@@ -74,8 +65,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#load(java.lang.Long)
@@ -85,9 +74,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Sets if the lines should be skipped by the import process or not based
-     * on the skipped parameter. It is only possible to mark as skipped/not
-     * skipped the lines that were validated successfully.
      * @param importedFileId Java type: java.lang.Long     * @param lineIds Java type: java.util.List     * @param skipped Java type: boolean
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#markAsSkipped(java.lang.Long,%20java.util.List,%20boolean)
      */
@@ -96,7 +82,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Starts an import
      * @param importedFileId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#process(java.lang.Long)
      */
@@ -105,7 +90,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#remove(java.lang.Long)
      */
@@ -114,7 +98,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#removeAll(java.util.Collection)
      */
@@ -123,7 +106,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#save(DTO)
@@ -133,7 +115,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Saves the description for the specified imported file id.
      * @param importedFileId Java type: java.lang.Long     * @param description Java type: java.lang.String
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#saveDescription(java.lang.Long,%20java.lang.String)
      */
@@ -142,7 +123,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Saves the values of the imported line
      * @param importedLineDTO Java type: org.cyclos.model.system.imports.ImportedLineDTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#saveImportedLine(org.cyclos.model.system.imports.ImportedLineDTO)
      */
@@ -151,7 +131,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Returns the imports that satisfy the query restrictions.
      * @param params Java type: org.cyclos.model.system.imports.ImportedFileQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#search(org.cyclos.model.system.imports.ImportedFileQuery)
@@ -161,7 +140,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Returns the imported lines that matches the query restrictions.
      * @param params Java type: org.cyclos.model.system.imports.ImportedLineQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#searchImportedLines(org.cyclos.model.system.imports.ImportedLineQuery)
@@ -171,7 +149,6 @@ class ImportService extends Service {
     }
     
     /**
-     * Uploads a file to be imported @return the imported file id.
      * @param importedFileDTO Java type: org.cyclos.model.system.imports.ImportedFileDTO     * @param input Java type: org.cyclos.server.utils.SerializableInputStream
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/ImportService.html#upload(org.cyclos.model.system.imports.ImportedFileDTO,%20org.cyclos.server.utils.SerializableInputStream)

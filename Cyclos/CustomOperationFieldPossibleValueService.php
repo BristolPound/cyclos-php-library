@@ -1,8 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service used for managing possible values of custom operation custom
- * fields
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -13,7 +11,6 @@ class CustomOperationFieldPossibleValueService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html#getData(java.lang.Long)
@@ -23,7 +20,6 @@ class CustomOperationFieldPossibleValueService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html#getDataForNew(DP)
@@ -33,8 +29,6 @@ class CustomOperationFieldPossibleValueService extends Service {
     }
     
     /**
-     * Inserts a list of custom field possible values, optionally in a
-     * category
      * @param customFieldId Java type: java.lang.Long     * @param categoryId Java type: java.lang.Long     * @param possibleValues Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html#insert(java.lang.Long,%20java.lang.Long,%20java.util.List)
      */
@@ -43,8 +37,6 @@ class CustomOperationFieldPossibleValueService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html#load(java.lang.Long)
@@ -54,7 +46,14 @@ class CustomOperationFieldPossibleValueService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
+     * @param id Java type: java.lang.Long     * @param up Java type: boolean
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html#move(java.lang.Long,%20boolean)
+     */
+    public function move($id, $up) {
+        $this->run('move', array($id, $up));
+    }
+    
+    /**
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html#remove(java.lang.Long)
      */
@@ -63,7 +62,6 @@ class CustomOperationFieldPossibleValueService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html#removeAll(java.util.Collection)
      */
@@ -72,7 +70,6 @@ class CustomOperationFieldPossibleValueService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html#save(DTO)
@@ -82,7 +79,6 @@ class CustomOperationFieldPossibleValueService extends Service {
     }
     
     /**
-     * Searches for possible values
      * @param query Java type: org.cyclos.model.system.fields.CustomFieldPossibleValueQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/system/CustomOperationFieldPossibleValueService.html#search(org.cyclos.model.system.fields.CustomFieldPossibleValueQuery)

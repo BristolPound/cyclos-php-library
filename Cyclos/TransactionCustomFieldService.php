@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service for transaction custom fields
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Relates the given transfer type with the given custom field
      * @param transferTypeId Java type: java.lang.Long     * @param customFieldId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#addRelation(java.lang.Long,%20java.lang.Long)
      */
@@ -21,7 +19,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#getData(java.lang.Long)
@@ -31,7 +28,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#getDataForNew(DP)
@@ -41,7 +37,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Lists all transaction custom fields with detailed information
 
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#list()
@@ -51,7 +46,15 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Returns the custom fields which are related to the given transfer type
+     * @param transferTypeId Java type: java.lang.Long
+     * @return Java type: java.util.List
+     * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#listAllRelated(java.lang.Long)
+     */
+    public function listAllRelated($transferTypeId) {
+        return $this->run('listAllRelated', array($transferTypeId));
+    }
+    
+    /**
      * @param transferTypeId Java type: java.lang.Long
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#listRelated(java.lang.Long)
@@ -61,8 +64,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#load(java.lang.Long)
@@ -72,7 +73,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#remove(java.lang.Long)
      */
@@ -81,7 +81,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#removeAll(java.util.Collection)
      */
@@ -90,7 +89,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Removes the given transfer type with the given custom field
      * @param transferTypeId Java type: java.lang.Long     * @param customFieldId Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#removeRelation(java.lang.Long,%20java.lang.Long)
      */
@@ -99,7 +97,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#save(DTO)
@@ -109,7 +106,6 @@ class TransactionCustomFieldService extends Service {
     }
     
     /**
-     * Saves a custom field order.
      * @param customFieldIds Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransactionCustomFieldService.html#saveOrder(java.util.List)
      */

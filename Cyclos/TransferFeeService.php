@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for transfer fees
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferFeeService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class TransferFeeService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferFeeService.html#getData(java.lang.Long)
@@ -22,7 +20,6 @@ class TransferFeeService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferFeeService.html#getDataForNew(DP)
@@ -32,7 +29,6 @@ class TransferFeeService extends Service {
     }
     
     /**
-     * Returns a list of all transfer fees for the given transfer type
      * @param transferTypeId Java type: java.lang.Long
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferFeeService.html#list(java.lang.Long)
@@ -42,8 +38,6 @@ class TransferFeeService extends Service {
     }
     
     /**
-     * Returns the possible generated transfer types for the given transfer
-     * fee
      * @param fee Java type: org.cyclos.model.banking.transferfees.TransferFeeDTO
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferFeeService.html#listPossibleGeneratedTransferTypes(org.cyclos.model.banking.transferfees.TransferFeeDTO)
@@ -53,8 +47,6 @@ class TransferFeeService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferFeeService.html#load(java.lang.Long)
@@ -64,7 +56,6 @@ class TransferFeeService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferFeeService.html#remove(java.lang.Long)
      */
@@ -73,7 +64,6 @@ class TransferFeeService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferFeeService.html#removeAll(java.util.Collection)
      */
@@ -82,7 +72,6 @@ class TransferFeeService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/banking/TransferFeeService.html#save(DTO)

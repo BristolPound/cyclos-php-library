@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service for a configuration's static content
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * Returns data for details of the given entity
      * @param id Java type: java.lang.Long
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#getData(java.lang.Long)
@@ -22,7 +20,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * Returns data for a new entity with the given context parameters
      * @param params Java type: DP
      * @return Java type: D
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#getDataForNew(DP)
@@ -32,7 +29,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * @return the help content according to the specified Role
      * @param role Java type: org.cyclos.model.access.Role
      * @return Java type: java.lang.String
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#getHelpContent(org.cyclos.model.access.Role)
@@ -42,7 +38,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * Returns data to list the static contents of a given configuration
      * @param configurationId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.contentmanagement.staticcontents.StaticContentListData
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#getListData(java.lang.Long)
@@ -52,8 +47,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * @return the sms help content. Note for version 4.0.3.x: at this moment
-     * only the role admin is supported.
      * @param role Java type: org.cyclos.model.access.Role
      * @return Java type: java.lang.String
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#getSmsHelpContent(org.cyclos.model.access.Role)
@@ -63,7 +56,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * Lists the static contents of a given configuration
      * @param configurationId Java type: java.lang.Long
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#list(java.lang.Long)
@@ -73,8 +65,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * Loads a DTO for the entity with the given id, ensuring that the logged
-     * user can see the record
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#load(java.lang.Long)
@@ -84,7 +74,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * Removes the entity associated with the given identifier
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#remove(java.lang.Long)
      */
@@ -93,7 +82,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * Removes the entities associated with the given identifiers
      * @param ids Java type: java.util.Collection
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#removeAll(java.util.Collection)
      */
@@ -102,7 +90,6 @@ class StaticContentService extends Service {
     }
     
     /**
-     * Saves the given object, returning the generated identifier
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/contentmanagement/StaticContentService.html#save(DTO)

@@ -1,7 +1,6 @@
 <?php namespace Cyclos;
 
 /**
- * Service interface for advertisement questions.
  * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdQuestionService.html 
  * WARNING: The API is still experimental, and is subject to change.
  */
@@ -12,7 +11,6 @@ class AdQuestionService extends Service {
     }
     
     /**
-     * Saves the answer for the given question
      * @param id Java type: java.lang.Long     * @param answer Java type: java.lang.String
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdQuestionService.html#answer(java.lang.Long,%20java.lang.String)
      */
@@ -21,7 +19,6 @@ class AdQuestionService extends Service {
     }
     
     /**
-     * Creates a new question for the given ad
      * @param adId Java type: java.lang.Long     * @param question Java type: java.lang.String
      * @return Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdQuestionService.html#ask(java.lang.Long,%20java.lang.String)
@@ -31,7 +28,6 @@ class AdQuestionService extends Service {
     }
     
     /**
-     * Returns the questions for the given ad
      * @param adId Java type: java.lang.Long
      * @return Java type: java.util.List
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdQuestionService.html#list(java.lang.Long)
@@ -41,7 +37,6 @@ class AdQuestionService extends Service {
     }
     
     /**
-     * Removes a question
      * @param id Java type: java.lang.Long
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdQuestionService.html#remove(java.lang.Long)
      */
@@ -50,7 +45,6 @@ class AdQuestionService extends Service {
     }
     
     /**
-     * Searches for questions
      * @param query Java type: org.cyclos.model.marketplace.advertisements.AdQuestionQuery
      * @return Java type: org.cyclos.utils.Page
      * @see http://www.cyclos.org/dev/current/ws-api-docs/org/cyclos/services/marketplace/AdQuestionService.html#search(org.cyclos.model.marketplace.advertisements.AdQuestionQuery)
