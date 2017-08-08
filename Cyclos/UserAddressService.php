@@ -1,19 +1,23 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html 
- * WARNING: The API is still experimental, and is subject to change.
+ * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html
+ * 
+ * Generated with Cyclos 4.6
+ * 
+ * WARNING: The API is subject to change between revision versions
+ * (for example, 4.5 to 4.6).
  */
-class AddressService extends Service {
+class UserAddressService extends Service {
 
     function __construct() {
-        parent::__construct('addressService');
+        parent::__construct('userAddressService');
     }
     
     /**
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
-     * @return Java type: org.cyclos.model.users.addresses.AddressListData
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#getAddressListData(org.cyclos.model.users.users.UserLocatorVO)
+     * @return Java type: org.cyclos.model.users.addresses.UserAddressListData
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#getAddressListData(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function getAddressListData($locator) {
         return $this->run('getAddressListData', array($locator));
@@ -22,7 +26,7 @@ class AddressService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.access.passwords.PasswordInputDTO
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#getConfirmationPasswordInputForRemove(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#getConfirmationPasswordInputForRemove(java.lang.Long)
      */
     public function getConfirmationPasswordInputForRemove($id) {
         return $this->run('getConfirmationPasswordInputForRemove', array($id));
@@ -31,7 +35,7 @@ class AddressService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: D
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#getData(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#getData(java.lang.Long)
      */
     public function getData($id) {
         return $this->run('getData', array($id));
@@ -40,7 +44,7 @@ class AddressService extends Service {
     /**
      * @param params Java type: DP
      * @return Java type: D
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#getDataForNew(DP)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#getDataForNew(DP)
      */
     public function getDataForNew($params) {
         return $this->run('getDataForNew', array($params));
@@ -49,7 +53,7 @@ class AddressService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#load(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#load(java.lang.Long)
      */
     public function load($id) {
         return $this->run('load', array($id));
@@ -57,7 +61,7 @@ class AddressService extends Service {
     
     /**
      * @param addressId Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#markAsDefault(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#markAsDefault(java.lang.Long)
      */
     public function markAsDefault($addressId) {
         $this->run('markAsDefault', array($addressId));
@@ -65,7 +69,7 @@ class AddressService extends Service {
     
     /**
      * @param id Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#remove(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#remove(java.lang.Long)
      */
     public function remove($id) {
         $this->run('remove', array($id));
@@ -73,7 +77,7 @@ class AddressService extends Service {
     
     /**
      * @param ids Java type: java.util.Collection
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#removeAll(java.util.Collection)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#removeAll(java.util.Collection)
      */
     public function removeAll($ids) {
         $this->run('removeAll', array($ids));
@@ -81,7 +85,7 @@ class AddressService extends Service {
     
     /**
      * @param ids Java type: java.util.Collection     * @param confirmationPassword Java type: java.lang.String
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#removeAllWithConfirmationPassword(java.util.Collection,%20java.lang.String)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#removeAllWithConfirmationPassword(java.util.Collection,%20java.lang.String)
      */
     public function removeAllWithConfirmationPassword($ids, $confirmationPassword) {
         $this->run('removeAllWithConfirmationPassword', array($ids, $confirmationPassword));
@@ -89,7 +93,7 @@ class AddressService extends Service {
     
     /**
      * @param id Java type: java.lang.Long     * @param confirmationPassword Java type: java.lang.String
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#removeWithConfirmationPassword(java.lang.Long,%20java.lang.String)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#removeWithConfirmationPassword(java.lang.Long,%20java.lang.String)
      */
     public function removeWithConfirmationPassword($id, $confirmationPassword) {
         $this->run('removeWithConfirmationPassword', array($id, $confirmationPassword));
@@ -98,7 +102,7 @@ class AddressService extends Service {
     /**
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#save(DTO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#save(DTO)
      */
     public function save($object) {
         return $this->run('save', array($object));
@@ -107,7 +111,7 @@ class AddressService extends Service {
     /**
      * @param object Java type: DTO     * @param confirmationPassword Java type: java.lang.String
      * @return Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/AddressService.html#saveWithConfirmationPassword(DTO,%20java.lang.String)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/UserAddressService.html#saveWithConfirmationPassword(DTO,%20java.lang.String)
      */
     public function saveWithConfirmationPassword($object, $confirmationPassword) {
         return $this->run('saveWithConfirmationPassword', array($object, $confirmationPassword));

@@ -1,8 +1,12 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html 
- * WARNING: The API is still experimental, and is subject to change.
+ * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html
+ * 
+ * Generated with Cyclos 4.6
+ * 
+ * WARNING: The API is subject to change between revision versions
+ * (for example, 4.5 to 4.6).
  */
 class RecordCustomFieldService extends Service {
 
@@ -13,7 +17,7 @@ class RecordCustomFieldService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: D
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#getData(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#getData(java.lang.Long)
      */
     public function getData($id) {
         return $this->run('getData', array($id));
@@ -22,7 +26,7 @@ class RecordCustomFieldService extends Service {
     /**
      * @param params Java type: DP
      * @return Java type: D
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#getDataForNew(DP)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#getDataForNew(DP)
      */
     public function getDataForNew($params) {
         return $this->run('getDataForNew', array($params));
@@ -30,7 +34,7 @@ class RecordCustomFieldService extends Service {
     
     /**
      * @param recordType Java type: org.cyclos.model.users.recordtypes.RecordTypeVO     * @param customField Java type: org.cyclos.model.system.fields.CustomFieldVO
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#linkShared(org.cyclos.model.users.recordtypes.RecordTypeVO,%20org.cyclos.model.system.fields.CustomFieldVO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#linkShared(org.cyclos.model.users.recordtypes.RecordTypeVO,%20org.cyclos.model.system.fields.CustomFieldVO)
      */
     public function linkShared($recordType, $customField) {
         $this->run('linkShared', array($recordType, $customField));
@@ -39,7 +43,7 @@ class RecordCustomFieldService extends Service {
     /**
      * @param recordType Java type: org.cyclos.model.users.recordtypes.RecordTypeVO
      * @return Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#list(org.cyclos.model.users.recordtypes.RecordTypeVO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#list(org.cyclos.model.users.recordtypes.RecordTypeVO)
      */
     public function _list($recordType) {
         return $this->run('list', array($recordType));
@@ -48,7 +52,7 @@ class RecordCustomFieldService extends Service {
     /**
 
      * @return Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#listShared()
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#listShared()
      */
     public function listShared() {
         return $this->run('listShared', array());
@@ -57,7 +61,7 @@ class RecordCustomFieldService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#load(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#load(java.lang.Long)
      */
     public function load($id) {
         return $this->run('load', array($id));
@@ -65,7 +69,7 @@ class RecordCustomFieldService extends Service {
     
     /**
      * @param id Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#remove(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#remove(java.lang.Long)
      */
     public function remove($id) {
         $this->run('remove', array($id));
@@ -73,7 +77,7 @@ class RecordCustomFieldService extends Service {
     
     /**
      * @param ids Java type: java.util.Collection
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#removeAll(java.util.Collection)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#removeAll(java.util.Collection)
      */
     public function removeAll($ids) {
         $this->run('removeAll', array($ids));
@@ -82,7 +86,7 @@ class RecordCustomFieldService extends Service {
     /**
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#save(DTO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#save(DTO)
      */
     public function save($object) {
         return $this->run('save', array($object));
@@ -90,7 +94,7 @@ class RecordCustomFieldService extends Service {
     
     /**
      * @param customFieldIds Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#saveOrder(java.util.List)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#saveOrder(java.util.List)
      */
     public function saveOrder($customFieldIds) {
         $this->run('saveOrder', array($customFieldIds));
@@ -98,7 +102,7 @@ class RecordCustomFieldService extends Service {
     
     /**
      * @param recordType Java type: org.cyclos.model.users.recordtypes.RecordTypeVO     * @param customFields Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#saveOrderOnType(org.cyclos.model.users.recordtypes.RecordTypeVO,%20java.util.List)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#saveOrderOnType(org.cyclos.model.users.recordtypes.RecordTypeVO,%20java.util.List)
      */
     public function saveOrderOnType($recordType, $customFields) {
         $this->run('saveOrderOnType', array($recordType, $customFields));
@@ -106,7 +110,7 @@ class RecordCustomFieldService extends Service {
     
     /**
      * @param recordType Java type: org.cyclos.model.users.recordtypes.RecordTypeVO     * @param customField Java type: org.cyclos.model.system.fields.CustomFieldVO
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#unlinkShared(org.cyclos.model.users.recordtypes.RecordTypeVO,%20org.cyclos.model.system.fields.CustomFieldVO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/RecordCustomFieldService.html#unlinkShared(org.cyclos.model.users.recordtypes.RecordTypeVO,%20org.cyclos.model.system.fields.CustomFieldVO)
      */
     public function unlinkShared($recordType, $customField) {
         $this->run('unlinkShared', array($recordType, $customField));

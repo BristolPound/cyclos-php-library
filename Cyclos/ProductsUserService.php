@@ -1,8 +1,12 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ProductsUserService.html 
- * WARNING: The API is still experimental, and is subject to change.
+ * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ProductsUserService.html
+ * 
+ * Generated with Cyclos 4.6
+ * 
+ * WARNING: The API is subject to change between revision versions
+ * (for example, 4.5 to 4.6).
  */
 class ProductsUserService extends Service {
 
@@ -11,35 +15,35 @@ class ProductsUserService extends Service {
     }
     
     /**
-     * @param product Java type: org.cyclos.model.users.products.ProductVO     * @param ownerId Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ProductsUserService.html#assign(org.cyclos.model.users.products.ProductVO,%20java.lang.Long)
+     * @param product Java type: org.cyclos.model.users.products.ProductVO     * @param owner Java type: VO
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ProductsUserService.html#assign(org.cyclos.model.users.products.ProductVO,%20VO)
      */
-    public function assign($product, $ownerId) {
-        $this->run('assign', array($product, $ownerId));
+    public function assign($product, $owner) {
+        $this->run('assign', array($product, $owner));
     }
     
     /**
-     * @param ownerId Java type: java.lang.Long     * @param channel Java type: org.cyclos.model.access.channels.ChannelVO
+     * @param owner Java type: VO     * @param channel Java type: org.cyclos.model.access.channels.ChannelVO     * @param principalType Java type: org.cyclos.model.access.principaltypes.PrincipalTypeVO
      * @return Java type: org.cyclos.model.users.products.ActiveProductsData
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ProductsUserService.html#getActiveProducts(java.lang.Long,%20org.cyclos.model.access.channels.ChannelVO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ProductsUserService.html#getActiveProducts(VO,%20org.cyclos.model.access.channels.ChannelVO,%20org.cyclos.model.access.principaltypes.PrincipalTypeVO)
      */
-    public function getActiveProducts($ownerId, $channel) {
-        return $this->run('getActiveProducts', array($ownerId, $channel));
+    public function getActiveProducts($owner, $channel, $principalType) {
+        return $this->run('getActiveProducts', array($owner, $channel, $principalType));
     }
     
     /**
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ProductsUserService.html#getUserProductLogs(org.cyclos.model.users.users.UserLocatorVO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ProductsUserService.html#getUserProductLogs(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function getUserProductLogs($locator) {
         return $this->run('getUserProductLogs', array($locator));
     }
     
     /**
-     * @param product Java type: org.cyclos.model.users.products.ProductVO     * @param ownerId Java type: java.lang.Long
+     * @param product Java type: org.cyclos.model.users.products.ProductVO     * @param ownerId Java type: VO
      * @return Java type: boolean
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ProductsUserService.html#unassign(org.cyclos.model.users.products.ProductVO,%20java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ProductsUserService.html#unassign(org.cyclos.model.users.products.ProductVO,%20VO)
      */
     public function unassign($product, $ownerId) {
         return $this->run('unassign', array($product, $ownerId));

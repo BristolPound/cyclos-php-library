@@ -1,8 +1,12 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html 
- * WARNING: The API is still experimental, and is subject to change.
+ * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html
+ * 
+ * Generated with Cyclos 4.6
+ * 
+ * WARNING: The API is subject to change between revision versions
+ * (for example, 4.5 to 4.6).
  */
 class ConnectedUserService extends Service {
 
@@ -13,7 +17,7 @@ class ConnectedUserService extends Service {
     /**
      * @param userLocator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: int
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html#disconnect(org.cyclos.model.users.users.UserLocatorVO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html#disconnect(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function disconnect($userLocator) {
         return $this->run('disconnect', array($userLocator));
@@ -22,7 +26,7 @@ class ConnectedUserService extends Service {
     /**
      * @param ids Java type: java.util.Set
      * @return Java type: int
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html#disconnectBySessionIds(java.util.Set)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html#disconnectBySessionIds(java.util.Set)
      */
     public function disconnectBySessionIds($ids) {
         return $this->run('disconnectBySessionIds', array($ids));
@@ -31,7 +35,7 @@ class ConnectedUserService extends Service {
     /**
 
      * @return Java type: org.cyclos.model.users.users.ConnectedUserSearchData
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html#getSearchData()
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html#getSearchData()
      */
     public function getSearchData() {
         return $this->run('getSearchData', array());
@@ -40,7 +44,7 @@ class ConnectedUserService extends Service {
     /**
      * @param query Java type: org.cyclos.model.users.users.ConnectedUserQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html#search(org.cyclos.model.users.users.ConnectedUserQuery)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/users/ConnectedUserService.html#search(org.cyclos.model.users.users.ConnectedUserQuery)
      */
     public function search($query) {
         return $this->run('search', array($query));

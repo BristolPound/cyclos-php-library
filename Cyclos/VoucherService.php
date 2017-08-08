@@ -1,8 +1,12 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html 
- * WARNING: The API is still experimental, and is subject to change.
+ * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html
+ * 
+ * Generated with Cyclos 4.6
+ * 
+ * WARNING: The API is subject to change between revision versions
+ * (for example, 4.5 to 4.6).
  */
 class VoucherService extends Service {
 
@@ -13,7 +17,7 @@ class VoucherService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.vouchers.VoucherBarcodeParams
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#barcode(org.cyclos.model.banking.vouchers.VoucherBarcodeParams)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#barcode(org.cyclos.model.banking.vouchers.VoucherBarcodeParams)
      */
     public function barcode($params) {
         return $this->run('barcode', array($params));
@@ -22,7 +26,7 @@ class VoucherService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.vouchers.BuyVouchersDTO
      * @return Java type: org.cyclos.model.banking.vouchers.VoucherPackWithIdsVO
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#buy(org.cyclos.model.banking.vouchers.BuyVouchersDTO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#buy(org.cyclos.model.banking.vouchers.BuyVouchersDTO)
      */
     public function buy($params) {
         return $this->run('buy', array($params));
@@ -31,16 +35,24 @@ class VoucherService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.vouchers.CancelVouchersDTO
      * @return Java type: int
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#cancel(org.cyclos.model.banking.vouchers.CancelVouchersDTO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#cancel(org.cyclos.model.banking.vouchers.CancelVouchersDTO)
      */
     public function cancel($params) {
         return $this->run('cancel', array($params));
     }
     
     /**
+     * @param params Java type: org.cyclos.model.banking.vouchers.ChangeVoucherExpirationDateDTO
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#changeExpirationDate(org.cyclos.model.banking.vouchers.ChangeVoucherExpirationDateDTO)
+     */
+    public function changeExpirationDate($params) {
+        $this->run('changeExpirationDate', array($params));
+    }
+    
+    /**
      * @param params Java type: org.cyclos.model.banking.vouchers.VoucherQuery     * @param markAsPrinted Java type: boolean
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#exportToCSV(org.cyclos.model.banking.vouchers.VoucherQuery,%20boolean)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#exportToCSV(org.cyclos.model.banking.vouchers.VoucherQuery,%20boolean)
      */
     public function exportToCSV($params, $markAsPrinted) {
         return $this->run('exportToCSV', array($params, $markAsPrinted));
@@ -49,7 +61,7 @@ class VoucherService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.vouchers.GenerateVouchersDTO
      * @return Java type: org.cyclos.model.banking.vouchers.VoucherPackWithIdsVO
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#generate(org.cyclos.model.banking.vouchers.GenerateVouchersDTO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#generate(org.cyclos.model.banking.vouchers.GenerateVouchersDTO)
      */
     public function generate($params) {
         return $this->run('generate', array($params));
@@ -58,7 +70,7 @@ class VoucherService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.vouchers.BuyVoucherDataParams
      * @return Java type: org.cyclos.model.banking.vouchers.BuyVoucherData
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getBuyData(org.cyclos.model.banking.vouchers.BuyVoucherDataParams)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getBuyData(org.cyclos.model.banking.vouchers.BuyVoucherDataParams)
      */
     public function getBuyData($params) {
         return $this->run('getBuyData', array($params));
@@ -67,7 +79,7 @@ class VoucherService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.model.banking.vouchers.VoucherData
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getData(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getData(java.lang.Long)
      */
     public function getData($id) {
         return $this->run('getData', array($id));
@@ -76,7 +88,7 @@ class VoucherService extends Service {
     /**
      * @param voucherType Java type: org.cyclos.model.banking.vouchertypes.VoucherTypeVO
      * @return Java type: org.cyclos.model.banking.vouchers.GenerateVouchersData
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getGenerateData(org.cyclos.model.banking.vouchertypes.VoucherTypeVO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getGenerateData(org.cyclos.model.banking.vouchertypes.VoucherTypeVO)
      */
     public function getGenerateData($voucherType) {
         return $this->run('getGenerateData', array($voucherType));
@@ -85,7 +97,7 @@ class VoucherService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.vouchers.RedeemVoucherDataParams
      * @return Java type: org.cyclos.model.banking.vouchers.RedeemVoucherData
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getRedeemData(org.cyclos.model.banking.vouchers.RedeemVoucherDataParams)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getRedeemData(org.cyclos.model.banking.vouchers.RedeemVoucherDataParams)
      */
     public function getRedeemData($params) {
         return $this->run('getRedeemData', array($params));
@@ -94,25 +106,25 @@ class VoucherService extends Service {
     /**
      * @param user Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.banking.vouchers.InitialRedeemVoucherData
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getRedeemInitialData(org.cyclos.model.users.users.UserLocatorVO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getRedeemInitialData(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function getRedeemInitialData($user) {
         return $this->run('getRedeemInitialData', array($user));
     }
     
     /**
-
+     * @param context Java type: org.cyclos.model.banking.vouchers.VoucherSearchContext     * @param user Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.banking.vouchers.VouchersSearchData
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getSearchData()
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#getSearchData(org.cyclos.model.banking.vouchers.VoucherSearchContext,%20org.cyclos.model.users.users.UserLocatorVO)
      */
-    public function getSearchData() {
-        return $this->run('getSearchData', array());
+    public function getSearchData($context, $user) {
+        return $this->run('getSearchData', array($context, $user));
     }
     
     /**
      * @param forUser Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#listTypesForBuy(org.cyclos.model.users.users.UserLocatorVO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#listTypesForBuy(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function listTypesForBuy($forUser) {
         return $this->run('listTypesForBuy', array($forUser));
@@ -121,16 +133,25 @@ class VoucherService extends Service {
     /**
 
      * @return Java type: java.util.List
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#listTypesForGenerate()
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#listTypesForGenerate()
      */
     public function listTypesForGenerate() {
         return $this->run('listTypesForGenerate', array());
     }
     
     /**
+     * @param token Java type: java.lang.String
+     * @return Java type: org.cyclos.model.banking.vouchers.VoucherVO
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#loadByToken(java.lang.String)
+     */
+    public function loadByToken($token) {
+        return $this->run('loadByToken', array($token));
+    }
+    
+    /**
      * @param id Java type: java.lang.Long
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#print(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#print(java.lang.Long)
      */
     public function _print($id) {
         return $this->run('print', array($id));
@@ -139,7 +160,7 @@ class VoucherService extends Service {
     /**
      * @param query Java type: org.cyclos.model.banking.vouchers.VoucherQuery     * @param markAsPrinted Java type: boolean
      * @return Java type: org.cyclos.server.utils.SerializableInputStream
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#printAll(org.cyclos.model.banking.vouchers.VoucherQuery,%20boolean)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#printAll(org.cyclos.model.banking.vouchers.VoucherQuery,%20boolean)
      */
     public function printAll($query, $markAsPrinted) {
         return $this->run('printAll', array($query, $markAsPrinted));
@@ -148,7 +169,7 @@ class VoucherService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.vouchers.RedeemVoucherDTO
      * @return Java type: org.cyclos.model.banking.vouchers.RedeemVoucherResult
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#redeem(org.cyclos.model.banking.vouchers.RedeemVoucherDTO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#redeem(org.cyclos.model.banking.vouchers.RedeemVoucherDTO)
      */
     public function redeem($params) {
         return $this->run('redeem', array($params));
@@ -157,7 +178,7 @@ class VoucherService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.vouchers.VoucherQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#search(org.cyclos.model.banking.vouchers.VoucherQuery)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#search(org.cyclos.model.banking.vouchers.VoucherQuery)
      */
     public function search($params) {
         return $this->run('search', array($params));
@@ -166,7 +187,7 @@ class VoucherService extends Service {
     /**
      * @param params Java type: org.cyclos.model.banking.vouchers.VoucherQuery
      * @return Java type: org.cyclos.model.banking.vouchers.VouchersResultsWithSummaryVO
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/banking/VoucherService.html#searchWithSummary(org.cyclos.model.banking.vouchers.VoucherQuery)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/banking/VoucherService.html#searchWithSummary(org.cyclos.model.banking.vouchers.VoucherQuery)
      */
     public function searchWithSummary($params) {
         return $this->run('searchWithSummary', array($params));

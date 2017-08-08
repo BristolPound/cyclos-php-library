@@ -1,8 +1,12 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/system/SetupService.html 
- * WARNING: The API is still experimental, and is subject to change.
+ * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/system/SetupService.html
+ * 
+ * Generated with Cyclos 4.6
+ * 
+ * WARNING: The API is subject to change between revision versions
+ * (for example, 4.5 to 4.6).
  */
 class SetupService extends Service {
 
@@ -12,7 +16,7 @@ class SetupService extends Service {
     
     /**
      * @param params Java type: org.cyclos.model.system.setup.SetupDTO
-     * @see http://documentation.cyclos.org/4.5.2/ws-api-docs/org/cyclos/services/system/SetupService.html#setup(org.cyclos.model.system.setup.SetupDTO)
+     * @see http://documentation.cyclos.org/4.6/ws-api-docs/org/cyclos/services/system/SetupService.html#setup(org.cyclos.model.system.setup.SetupDTO)
      */
     public function setup($params) {
         $this->run('setup', array($params));
