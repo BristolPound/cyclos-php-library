@@ -1,9 +1,9 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html
+ * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/access/LoginService.html
  * 
- * Generated with Cyclos 4.8.1
+ * Generated with Cyclos 4.12
  * 
  * WARNING: The API is subject to change between revision versions
  * (for example, 4.5 to 4.6).
@@ -16,25 +16,25 @@ class LoginService extends Service {
     
     /**
      * @param password Java type: java.lang.String
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html#checkSecondaryPassword(java.lang.String)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/access/LoginService.html#checkSecondaryPassword(java.lang.String)
      */
     public function checkSecondaryPassword($password) {
         $this->__run('checkSecondaryPassword', array($password));
     }
     
     /**
-     * @param channelName Java type: java.lang.String
+     * @param channelName Java type: java.lang.String     * @param deviceId Java type: java.lang.Long     * @param pinId Java type: java.lang.Long
      * @return Java type: org.cyclos.model.access.LoginData
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html#getLoginData(java.lang.String)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/access/LoginService.html#getLoginData(java.lang.String,%20java.lang.Long,%20java.lang.Long)
      */
-    public function getLoginData($channelName) {
-        return $this->__run('getLoginData', array($channelName));
+    public function getLoginData($channelName, $deviceId, $pinId) {
+        return $this->__run('getLoginData', array($channelName, $deviceId, $pinId));
     }
     
     /**
 
      * @return Java type: org.cyclos.model.access.passwords.PasswordInputDTO
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html#getSecondaryPasswordInput()
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/access/LoginService.html#getSecondaryPasswordInput()
      */
     public function getSecondaryPasswordInput() {
         return $this->__run('getSecondaryPasswordInput', array());
@@ -43,25 +43,16 @@ class LoginService extends Service {
     /**
      * @param sessionTimeout Java type: org.cyclos.model.utils.TimeIntervalDTO
      * @return Java type: org.cyclos.model.users.users.UserLoginResult
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html#login(org.cyclos.model.utils.TimeIntervalDTO)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/access/LoginService.html#login(org.cyclos.model.utils.TimeIntervalDTO)
      */
     public function login($sessionTimeout) {
         return $this->__run('login', array($sessionTimeout));
     }
     
     /**
-     * @param sessionTimeout Java type: org.cyclos.model.utils.TimeIntervalDTO
-     * @return Java type: org.cyclos.model.access.InitializationData
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html#loginAndGetInitializationData(org.cyclos.model.utils.TimeIntervalDTO)
-     */
-    public function loginAndGetInitializationData($sessionTimeout) {
-        return $this->__run('loginAndGetInitializationData', array($sessionTimeout));
-    }
-    
-    /**
      * @param params Java type: org.cyclos.model.users.users.UserLoginDTO
      * @return Java type: org.cyclos.model.users.users.UserLoginDetailedResult
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html#loginUser(org.cyclos.model.users.users.UserLoginDTO)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/access/LoginService.html#loginUser(org.cyclos.model.users.users.UserLoginDTO)
      */
     public function loginUser($params) {
         return $this->__run('loginUser', array($params));
@@ -69,7 +60,7 @@ class LoginService extends Service {
     
     /**
 
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html#logout()
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/access/LoginService.html#logout()
      */
     public function logout() {
         $this->__run('logout', array());
@@ -78,7 +69,7 @@ class LoginService extends Service {
     /**
      * @param token Java type: java.lang.String
      * @return Java type: boolean
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html#logoutUser(java.lang.String)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/access/LoginService.html#logoutUser(java.lang.String)
      */
     public function logoutUser($token) {
         return $this->__run('logoutUser', array($token));
@@ -87,7 +78,7 @@ class LoginService extends Service {
     /**
 
      * @return Java type: java.lang.String
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/access/LoginService.html#replaceSession()
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/access/LoginService.html#replaceSession()
      */
     public function replaceSession() {
         return $this->__run('replaceSession', array());

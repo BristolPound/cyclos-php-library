@@ -1,9 +1,9 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/messaging/NotificationSettingsService.html
+ * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/messaging/NotificationSettingsService.html
  * 
- * Generated with Cyclos 4.8.1
+ * Generated with Cyclos 4.12
  * 
  * WARNING: The API is subject to change between revision versions
  * (for example, 4.5 to 4.6).
@@ -15,37 +15,20 @@ class NotificationSettingsService extends Service {
     }
     
     /**
-
-     * @return Java type: org.cyclos.model.messaging.notificationsettings.AdminNotificationSettingsData
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/messaging/NotificationSettingsService.html#getAdminNotificationSettingsData()
-     */
-    public function getAdminNotificationSettingsData() {
-        return $this->__run('getAdminNotificationSettingsData', array());
-    }
-    
-    /**
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
-     * @return Java type: org.cyclos.model.messaging.notificationsettings.UserNotificationSettingsData
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/messaging/NotificationSettingsService.html#getUserNotificationSettingsData(org.cyclos.model.users.users.UserLocatorVO)
+     * @return Java type: org.cyclos.model.messaging.notificationsettings.NotificationSettingsData
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/messaging/NotificationSettingsService.html#getData(org.cyclos.model.users.users.UserLocatorVO)
      */
-    public function getUserNotificationSettingsData($locator) {
-        return $this->__run('getUserNotificationSettingsData', array($locator));
+    public function getData($locator) {
+        return $this->__run('getData', array($locator));
     }
     
     /**
-     * @param dto Java type: org.cyclos.model.messaging.notificationsettings.AdminNotificationSettingsDTO
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/messaging/NotificationSettingsService.html#saveAdmin(org.cyclos.model.messaging.notificationsettings.AdminNotificationSettingsDTO)
+     * @param dto Java type: org.cyclos.model.messaging.notificationsettings.NotificationSettingsDTO
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/messaging/NotificationSettingsService.html#save(org.cyclos.model.messaging.notificationsettings.NotificationSettingsDTO)
      */
-    public function saveAdmin($dto) {
-        $this->__run('saveAdmin', array($dto));
-    }
-    
-    /**
-     * @param dto Java type: org.cyclos.model.messaging.notificationsettings.UserNotificationSettingsDTO
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/messaging/NotificationSettingsService.html#saveUser(org.cyclos.model.messaging.notificationsettings.UserNotificationSettingsDTO)
-     */
-    public function saveUser($dto) {
-        $this->__run('saveUser', array($dto));
+    public function save($dto) {
+        $this->__run('save', array($dto));
     }
     
 }

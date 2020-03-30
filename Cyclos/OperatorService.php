@@ -1,9 +1,9 @@
 <?php namespace Cyclos;
 
 /**
- * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html
+ * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html
  * 
- * Generated with Cyclos 4.8.1
+ * Generated with Cyclos 4.12
  * 
  * WARNING: The API is subject to change between revision versions
  * (for example, 4.5 to 4.6).
@@ -16,8 +16,17 @@ class OperatorService extends Service {
     
     /**
      * @param id Java type: java.lang.Long
+     * @return Java type: org.cyclos.model.access.passwords.PasswordInputDTO
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#getConfirmationPasswordInputForRemove(java.lang.Long)
+     */
+    public function getConfirmationPasswordInputForRemove($id) {
+        return $this->__run('getConfirmationPasswordInputForRemove', array($id));
+    }
+    
+    /**
+     * @param id Java type: java.lang.Long
      * @return Java type: D
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#getData(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#getData(java.lang.Long)
      */
     public function getData($id) {
         return $this->__run('getData', array($id));
@@ -26,7 +35,7 @@ class OperatorService extends Service {
     /**
      * @param params Java type: DP
      * @return Java type: D
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#getDataForNew(DP)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#getDataForNew(DP)
      */
     public function getDataForNew($params) {
         return $this->__run('getDataForNew', array($params));
@@ -35,7 +44,7 @@ class OperatorService extends Service {
     /**
      * @param user Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.users.operators.OperatorsSearchData
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#getSearchData(org.cyclos.model.users.users.UserLocatorVO)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#getSearchData(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function getSearchData($user) {
         return $this->__run('getSearchData', array($user));
@@ -44,7 +53,7 @@ class OperatorService extends Service {
     /**
      * @param locator Java type: org.cyclos.model.users.users.UserLocatorVO
      * @return Java type: org.cyclos.model.users.operators.ViewOperatorProfileData
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#getViewProfileData(org.cyclos.model.users.users.UserLocatorVO)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#getViewProfileData(org.cyclos.model.users.users.UserLocatorVO)
      */
     public function getViewProfileData($locator) {
         return $this->__run('getViewProfileData', array($locator));
@@ -53,7 +62,7 @@ class OperatorService extends Service {
     /**
      * @param id Java type: java.lang.Long
      * @return Java type: DTO
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#load(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#load(java.lang.Long)
      */
     public function load($id) {
         return $this->__run('load', array($id));
@@ -62,7 +71,7 @@ class OperatorService extends Service {
     /**
      * @param dto Java type: org.cyclos.model.users.operators.OperatorRegistrationDTO
      * @return Java type: org.cyclos.model.users.users.UserRegistrationResult
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#register(org.cyclos.model.users.operators.OperatorRegistrationDTO)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#register(org.cyclos.model.users.operators.OperatorRegistrationDTO)
      */
     public function register($dto) {
         return $this->__run('register', array($dto));
@@ -70,7 +79,7 @@ class OperatorService extends Service {
     
     /**
      * @param id Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#remove(java.lang.Long)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#remove(java.lang.Long)
      */
     public function remove($id) {
         $this->__run('remove', array($id));
@@ -78,25 +87,50 @@ class OperatorService extends Service {
     
     /**
      * @param ids Java type: java.util.Collection
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#removeAll(java.util.Collection)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#removeAll(java.util.Collection)
      */
     public function removeAll($ids) {
         $this->__run('removeAll', array($ids));
     }
     
     /**
+     * @param ids Java type: java.util.Collection     * @param confirmationPassword Java type: java.lang.String
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#removeAllWithConfirmationPassword(java.util.Collection,%20java.lang.String)
+     */
+    public function removeAllWithConfirmationPassword($ids, $confirmationPassword) {
+        $this->__run('removeAllWithConfirmationPassword', array($ids, $confirmationPassword));
+    }
+    
+    /**
+     * @param id Java type: java.lang.Long     * @param confirmationPassword Java type: java.lang.String
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#removeWithConfirmationPassword(java.lang.Long,%20java.lang.String)
+     */
+    public function removeWithConfirmationPassword($id, $confirmationPassword) {
+        $this->__run('removeWithConfirmationPassword', array($id, $confirmationPassword));
+    }
+    
+    /**
      * @param object Java type: DTO
      * @return Java type: java.lang.Long
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#save(DTO)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#save(DTO)
      */
     public function save($object) {
         return $this->__run('save', array($object));
     }
     
     /**
+     * @param object Java type: DTO     * @param confirmationPassword Java type: java.lang.String
+     * @return Java type: java.lang.Long
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#saveWithConfirmationPassword(DTO,%20java.lang.String)
+     */
+    public function saveWithConfirmationPassword($object, $confirmationPassword) {
+        return $this->__run('saveWithConfirmationPassword', array($object, $confirmationPassword));
+    }
+    
+    /**
      * @param params Java type: org.cyclos.model.users.operators.OperatorQuery
      * @return Java type: org.cyclos.utils.Page
-     * @see http://documentation.cyclos.org/4.8.1/ws-api-docs/org/cyclos/services/users/OperatorService.html#search(org.cyclos.model.users.operators.OperatorQuery)
+     * @see http://documentation.cyclos.org/4.12/ws-api-docs/org/cyclos/services/users/OperatorService.html#search(org.cyclos.model.users.operators.OperatorQuery)
      */
     public function search($params) {
         return $this->__run('search', array($params));
